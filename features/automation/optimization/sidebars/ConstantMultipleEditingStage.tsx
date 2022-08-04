@@ -3,6 +3,7 @@ import { IlkData } from 'blockchain/ilks'
 import { ActionPills } from 'components/ActionPills'
 import { useAppContext } from 'components/AppContextProvider'
 import { MultipleRangeSlider } from 'components/vault/MultipleRangeSlider'
+import { SidebarResetButton } from 'components/vault/sidebar/SidebarResetButton'
 import { VaultActionInput } from 'components/vault/VaultActionInput'
 import { VaultWarnings } from 'components/vault/VaultWarnings'
 import { ConstantMultipleInfoSection } from 'features/automation/basicBuySell/InfoSections/ConstantMultipleInfoSection'
@@ -187,17 +188,28 @@ export function ConstantMultipleEditingStage({
         isAutoSellEnabled={autoSellTriggerData.isTriggerEnabled}
       />
       {isEditing && (
-        <ConstantMultipleInfoSectionControl
-          token={token}
-          nextBuyPrice={nextBuyPrice}
-          nextSellPrice={nextSellPrice}
-          collateralToBePurchased={collateralToBePurchased}
-          collateralToBeSold={collateralToBeSold}
-          estimatedGasCostOnTrigger={estimatedGasCostOnTrigger}
-          estimatedBuyFee={estimatedBuyFee}
-          estimatedSellFee={estimatedSellFee}
-          constantMultipleState={constantMultipleState}
-        />
+        <>
+          <SidebarResetButton
+            clear={() => {
+              // TODO: PK use uiChanges here
+              // uiChanges.publish(CONSTANT_MULTIPLE_FORM_CHANGE, {
+              //   type: 'reset',
+              //   resetData: ...,
+              // })
+            }}
+          />
+          <ConstantMultipleInfoSectionControl
+            token={token}
+            nextBuyPrice={nextBuyPrice}
+            nextSellPrice={nextSellPrice}
+            collateralToBePurchased={collateralToBePurchased}
+            collateralToBeSold={collateralToBeSold}
+            estimatedGasCostOnTrigger={estimatedGasCostOnTrigger}
+            estimatedBuyFee={estimatedBuyFee}
+            estimatedSellFee={estimatedSellFee}
+            constantMultipleState={constantMultipleState}
+          />
+        </>
       )}
     </>
   )
