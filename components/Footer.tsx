@@ -9,45 +9,47 @@ import getConfig from 'next/config'
 import React from 'react'
 import { Box, Card, Container, Flex, Grid, Image, Link, Text } from 'theme-ui'
 
-import { FooterBackground } from '../theme/FooterBackground'
 import { ChevronUpDown } from './ChevronUpDown'
 import { SelectComponents } from 'react-select/src/components'
 
 const {
-  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo, apiHost },
+  publicRuntimeConfig: { buildHash, buildDate, showBuildInfo },
 } = getConfig()
-
+//@GSUpro add links 
 const ROUTES = {
-  CONTACT: `${apiHost}/daiwallet/contact`,
+  // CONTACT: `${apiHost}/daiwallet/contact`,
+  CONTACT: `/inprogress`,
   SUPPORT: '/support',
-  TWITTER: 'https://twitter.com/oasisdotapp',
-  DISCORD: 'https://discord.gg/Kc2bBB59GC',
+  TWITTER: ' https://twitter.com/GSUcoin',
+  DISCORD: 'https://discord.com/invite/cm3tmM37W3',
 }
-
+//@GSUpro add links ends
+//@GSUpro add links
 const FOOTER_SECTIONS = [
   {
     titleKey: 'nav.about',
     links: [
-      { labelKey: 'nav.team', url: '/about' },
-      { labelKey: 'nav.careers', url: '/careers' },
+      // { labelKey: 'nav.team', url: '/about' },
+      // { labelKey: 'nav.careers', url: '/careers' },
       { labelKey: 'nav.privacy', url: '/privacy' },
       { labelKey: 'nav.cookie', url: '/cookie' },
       { labelKey: 'nav.terms', url: '/terms' },
-      { labelKey: 'nav.contact', url: `${apiHost}/daiwallet/contact` },
+      // { labelKey: 'nav.contact', url: `${apiHost}/daiwallet/contact` },
+      { labelKey: 'nav.contact', url: `/inprogress` },
     ],
   },
   {
     titleKey: 'nav.resources',
     links: [
-      { labelKey: 'nav.blog', url: 'https://blog.oasis.app', target: '_self' },
+      { labelKey: 'nav.blog', url: '/inprogress' },
       {
         labelKey: 'nav.faq',
         url: '/support',
       },
       // add link
-      { labelKey: 'nav.knowledge-centre', url: 'https://kb.oasis.app/help', target: '_blank' },
+      { labelKey: 'nav.knowledge-centre', url: '/inprogress' },
       { labelKey: 'nav.oracles', url: '/oracles' },
-      { labelKey: 'nav.referrals', url: '/referrals' },
+      // { labelKey: 'nav.referrals', url: '/referrals' },
     ],
   },
   {
@@ -55,13 +57,15 @@ const FOOTER_SECTIONS = [
     links: [
       {
         labelKey: 'nav.dai-wallet',
-        url: `${apiHost}/daiwallet`,
+        // url: `${apiHost}/daiwallet`,
+        url: `/inprogress`,
         target: '_self',
       },
       { labelKey: 'nav.borrow', url: '/borrow' },
       { labelKey: 'nav.multiply', url: '/multiply' },
     ],
   },
+  //@GSUpro remove links ends
 ]
 
 const LangSelectComponents: Partial<SelectComponents<{
@@ -133,7 +137,7 @@ export function TemporaryFooter() {
           <Text>
             Commit:{' '}
             <Link
-              href={`https://github.com/OasisDex/oasis-borrow/commit/${buildHash}`}
+              href={`https://github.com/gsu-protocol/gsu-borrow/commit/${buildHash}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -150,7 +154,7 @@ export function TemporaryFooter() {
 function SocialWithLogo() {
   return (
     <Grid gap={3}>
-      <Image src={staticFilesRuntimeUrl('/static/img/logo_footer.svg')} sx={{ height: '27px' }} />
+      <Image src={staticFilesRuntimeUrl('/static/img/logo-footer.svg')} sx={{ height: '27px' }} />
       <Flex sx={{ alignItems: 'center', a: { fontSize: '0px' }, my: 2 }}>
         <AppLink href={ROUTES.TWITTER}>
           <Icon name="twitter" size="auto" width="18px" height="16px" />
@@ -158,9 +162,11 @@ function SocialWithLogo() {
         <AppLink href={ROUTES.DISCORD} sx={{ mx: 3 }}>
           <Icon name="discord" size="auto" width="20px" height="23px" />
         </AppLink>
-        <AppLink href="https://github.com/OasisDEX/oasis-borrow/">
+        {/*@GSUpro add github*/}
+        <AppLink href="https://github.com/gsu-protocol/gsu-borrow">
           <Icon name="github" size="auto" width="21px" />
         </AppLink>
+        {/*@GSUpro add github end*/}
       </Flex>
       <Flex sx={{ justifyContent: ['center', 'flex-start'] }}>
         <LanguageSelect components={LangSelectComponents} />
@@ -212,7 +218,6 @@ export function Footer() {
         </Flex>
       </Container>
       <TemporaryFooter />
-      <FooterBackground />
     </Box>
   )
 }

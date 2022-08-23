@@ -62,14 +62,19 @@ export function ProductCardsFilter({
   function handleHover(filter: string) {
     setHover(filter)
   }
-
+  /*@GSUpro updates the container styles*/
   return (
     <>
       <Box sx={{ display: ['none', 'block'] }}>
-        <Flex sx={{ justifyContent: 'space-around', mb: 4 }}>
+        <Flex sx={{ justifyContent: 'center', mb: 4 }}>
           {filters.map((tab) => {
             return (
-              <Button variant="unStyled" onClick={() => handleTabClick(tab.name)} key={tab.name}>
+              <Button
+                variant="unStyled"
+                sx={{ minWidth: '80px' }}
+                onClick={() => handleTabClick(tab.name)}
+                key={tab.name}
+              >
                 <Flex
                   sx={{ flexDirection: 'column', alignItems: 'center' }}
                   onMouseEnter={() => handleHover(tab.name)}

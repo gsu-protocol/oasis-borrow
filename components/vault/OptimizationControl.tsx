@@ -46,7 +46,7 @@ function ZeroDebtOptimizationBanner({
           {showLink && (
             <>
               {', '}
-              <AppLink href="https://kb.oasis.app/help" sx={{ fontSize: 3 }}>
+              <AppLink href="/inprogress" sx={{ fontSize: 3 }}>
                 {t('here')}.
               </AppLink>
             </>

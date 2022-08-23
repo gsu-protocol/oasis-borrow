@@ -78,14 +78,16 @@ export const supportedBorrowIlks = [
   'WBTC-B',
   'WBTC-C',
   'RENBTC-A',
-  'LINK-A',
-  'GUSD-A',
-  'YFI-A',
-  'MANA-A',
-  'MATIC-A',
-  'UNIV2USDCETH-A',
-  'UNIV2DAIUSDC-A',
-  'CRVV1ETHSTETH-A',
+  // @GSUpro remove unspported Ilks
+  // 'LINK-A',
+  // 'GUSD-A',
+  // 'YFI-A',
+  // 'MANA-A',
+  // 'MATIC-A',
+  // 'UNIV2USDCETH-A',
+  // 'UNIV2DAIUSDC-A',
+  // 'CRVV1ETHSTETH-A',
+  // @GSUpro remove unspported Ilks end
   'WSTETH-B',
 ]
 
@@ -98,10 +100,12 @@ export const supportedMultiplyIlks = [
   'WBTC-B',
   'WBTC-C',
   'RENBTC-A',
-  'LINK-A',
-  'YFI-A',
-  'MANA-A',
-  'MATIC-A',
+  // @GSUpro remove unspported Ilks
+  // 'LINK-A',
+  // 'YFI-A',
+  // 'MANA-A',
+  // 'MATIC-A',
+  // @GSUpro remove unspported Ilks end
   'WSTETH-B',
 ]
 
@@ -198,13 +202,15 @@ export const productCardsConfig: {
       genericFilters.featured,
       genericFilters.eth,
       genericFilters.btc,
-      genericFilters.unilp,
-      genericFilters.link,
-      genericFilters.yfi,
-      genericFilters.mana,
-      genericFilters.matic,
-      genericFilters.gusd,
-      genericFilters.crvlp,
+      //@GSUpro hide filters
+      // genericFilters.unilp,
+      // genericFilters.link,
+      // genericFilters.yfi,
+      // genericFilters.mana,
+      // genericFilters.matic,
+      // genericFilters.gusd,
+      // genericFilters.crvlp,
+      //@GSUpro hide filters end
     ],
     featuredCards: ['ETH-C', 'WBTC-C', 'CRVV1ETHSTETH-A', 'WSTETH-B'],
     inactiveIlks: [],
@@ -224,10 +230,12 @@ export const productCardsConfig: {
       genericFilters.featured,
       genericFilters.eth,
       genericFilters.btc,
-      genericFilters.link,
-      genericFilters.yfi,
-      genericFilters.mana,
-      genericFilters.matic,
+      //@GSUpro hide filters
+      // genericFilters.link,
+      // genericFilters.yfi,
+      // genericFilters.mana,
+      // genericFilters.matic,
+      //@GSUpro hide filters end
     ],
     featuredCards: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
     inactiveIlks: [],
@@ -288,103 +296,104 @@ export const productCardsConfig: {
     'UNIV2WBTCDAI-A': 'lp-tokens',
     'CRVV1ETHSTETH-A': 'borrow',
   } as Record<string, string>,
+  // @GSUpro remove links to oasis
   descriptionLinks: {
     'ETH-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-      name: 'Maker (ETH-A)',
+        '/inprogress',
+      name: 'GSUP (ETH-A)',
     },
     'ETH-B': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-      name: 'Maker (ETH-B)',
+        '/inprogress',
+      name: 'GSUP (ETH-B)',
     },
     'ETH-C': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_126274073291652792840397',
-      name: 'Maker (ETH-C)',
+        '/inprogress',
+      name: 'GSUP (ETH-C)',
     },
     'WSTETH-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-      name: 'Maker (WSTETH-A)',
+        '/inprogress',
+      name: 'GSUP (WSTETH-A)',
     },
     'WSTETH-B': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_274014616431652792856773',
-      name: 'Maker (WSTETH-B)',
+        '/inprogress',
+      name: 'GSUP (WSTETH-B)',
     },
     'WBTC-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
-      name: 'Maker (WBTC-A)',
+        '/inprogress',
+      name: 'GSUP (WBTC-A)',
     },
     'WBTC-B': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
-      name: 'Maker (WBTC-B)',
+        '/inprogress',
+      name: 'GSUP (WBTC-B)',
     },
     'WBTC-C': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_884958393561652792865000',
-      name: 'Maker (WBTC-C)',
+        '/inprogress',
+      name: 'GSUP (WBTC-C)',
     },
     'RENBTC-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_414294869681652792871926',
-      name: 'Maker (RENBTC-A)',
+        '/inprogress',
+      name: 'GSUP (RENBTC-A)',
     },
     'LINK-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_42582440791652792878921',
-      name: 'Maker (LINK-A)',
+        '/inprogress',
+      name: 'GSUP (LINK-A)',
     },
     'MANA-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_536808626201652802419989',
-      name: 'Maker (MANA-A)',
+        '/inprogress',
+      name: 'GSUP (MANA-A)',
     },
     'MATIC-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_615723980991652792924214',
-      name: 'Maker (MATIC-A)',
+        '/inprogress',
+      name: 'GSUP (MATIC-A)',
     },
     'GUSD-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4952663551081652792930397',
-      name: 'Maker (GUSD-A)',
+        '/inprogress',
+      name: 'GSUP (GUSD-A)',
     },
     'YFI-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_4996750151161652792936142',
-      name: 'Maker (YFI-A)',
+        '/inprogress',
+      name: 'GSUP (YFI-A)',
     },
     'GUNIV3DAIUSDC1-A': {
-      link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
-      name: 'Maker/Gelato/Uniswap',
+      link: '/inprogress',
+      name: 'GSUP/Gelato/Uniswap',
     },
     'GUNIV3DAIUSDC2-A': {
-      link: 'https://kb.oasis.app/help/earn-with-dai-and-g-uni-multiply',
-      name: 'Maker/Gelato/Uniswap',
+      link: '/inprogress',
+      name: 'GSUP/Gelato/Uniswap',
     },
     'UNIV2USDCETH-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
-      name: 'Maker/Uniswap',
+        '/inprogress',
+      name: 'GSUP/Uniswap',
     },
     'UNIV2DAIUSDC-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_1653695461291652792950901',
-      name: 'Maker/Uniswap',
+        '/inprogress',
+      name: 'GSUP/Uniswap',
     },
     'CRVV1ETHSTETH-A': {
       link:
-        'https://kb.oasis.app/help/collaterals-supported-in-oasis-app#h_67885280351652802433065',
-      name: 'Maker/Curve/Lido',
+        '/inprogress',
+      name: 'GSUP/Curve/Lido',
     },
   },
 }
-
+// @GSUpro remove links to oasis end
 function btcProductCards<T extends IlkTokenMap>(productCardsData: Array<T>): Array<T> {
   return productCardsData.filter((ilk) => {
     return BTC_TOKENS.includes(ilk.token)
