@@ -94,7 +94,9 @@ export function FaqLayout({ learnMoreUrl, children }: { learnMoreUrl: string } &
                 i18nKey="simulate-faq.learn-more-body"
                 components={[
                   <AppLink href={learnMoreUrl} />,
-                  <AppLink href="https://discord.gg/oasisapp" />,
+                  //@GSUpro updates link
+                  <AppLink href="https://discord.com/invite/cm3tmM37W3" />,
+                  //@GSUpro updates link end
                 ]}
               />
             </Text>
