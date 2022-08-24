@@ -304,11 +304,18 @@ export function PositionList({ positions }: { positions: PositionVM[] }) {
                     <AppLink {...position.editLinkProps}>
                       <Button
                         variant="secondary"
+                        //@GSUpro fixes the styles
                         sx={{
+                          bg: 'secondary100',
+                          color: 'black',
                           fontSize: 1,
                           px: '24px',
                           py: '11px',
+                          '&:hover': {
+                            bg: 'darkgrey',
+                          },
                         }}
+                        //@GSUpro fixes the styles end
                       >
                         {getVaultActionButtonTranslation(position.isOwnerView, t)}
                       </Button>
