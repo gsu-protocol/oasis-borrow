@@ -68,10 +68,18 @@ export function StatefulTooltip({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
-      sx={containerSx}
+      //@GSUpro fixes tooltip issue
+      sx={{ position: 'relative', ...containerSx }}
     >
       {children}
-      {tooltipOpen && <Tooltip sx={tooltipSx}>{tooltip}</Tooltip>}
+      {tooltipOpen && (
+        <Tooltip
+          sx={{ minWidth: '280px', ...tooltipSx }}
+          //@GSUpro fixes tooltip issue end
+        >
+          {tooltip}
+        </Tooltip>
+      )}
     </Flex>
   )
 }
