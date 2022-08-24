@@ -24,7 +24,7 @@ export default class MyDocument extends Document<Document> {
 
   render() {
     return (
-      <Html>
+      <Html style={{ height: 'unset' }}>
         <Head>
           <PWATags />
         </Head>
