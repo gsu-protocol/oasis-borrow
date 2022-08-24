@@ -138,7 +138,9 @@ export function DetailsSectionContentCard({
       <Heading
         as="h3"
         variant="label"
-        sx={{ fontSize: '20px', cursor: modal ? 'pointer' : 'auto' }}
+        //@GSUpro fixes styles
+        sx={{ cursor: modal ? 'pointer' : 'auto' }}
+        //@GSUpro fixes styles end
         {...hightlightableItemEvents}
       >
         {title}
