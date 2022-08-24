@@ -15,7 +15,7 @@ import { SelectComponents } from 'react-select/src/components'
 const {
   publicRuntimeConfig: { buildHash, buildDate, showBuildInfo },
 } = getConfig()
-//@GSUpro add links 
+//@GSUpro add links
 const ROUTES = {
   // CONTACT: `${apiHost}/daiwallet/contact`,
   CONTACT: `/inprogress`,

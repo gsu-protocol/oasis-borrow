@@ -68,7 +68,13 @@ export function WithAnnouncementLayout({
           />
         </Container>
       )}
-      <Container variant={variant || 'appContainer'} sx={{ flex: 2, mb: 5 }} as="main">
+      <Container
+        variant={variant || 'appContainer'}
+        //@GSUpro fixes background height
+        sx={{ flex: 2, mb: 5, minHeight: '900px' }}
+        //@GSUpro fixes background height end
+        as="main"
+      >
         <Flex sx={{ width: '100%', height: '100%' }}>{children}</Flex>
       </Container>
       {footer}
