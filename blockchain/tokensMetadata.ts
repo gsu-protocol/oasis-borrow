@@ -152,7 +152,10 @@ export const tokens = [
     iconColor: 'renbtc_circle_color',
     coinpaprikaTicker: 'renbtc-renbtc',
     color: '#838489',
-    background: 'linear-gradient(160.47deg, #F1F5F5 0.35%, #E5E7E8 99.18%), #FFFFFF',
+    //@GSUpro fixes gradient
+    background:
+      'linear-gradient(120deg, rgba(233,74,116,0.19931722689075626) 0%, rgba(179,202,101,0.196516106442577) 99%)',
+    //@GSUpro fixes gradient end
     bannerIcon: staticFilesRuntimeUrl('/static/img/tokens/renBTC.png'),
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/renBTC.gif'),
     tags: [],
@@ -624,7 +627,10 @@ export const tokens = [
     iconCircle: 'curve_circle_color',
     iconColor: 'curve_circle_color',
     color: '#ff077d',
-    background: 'linear-gradient(160.47deg, #F0F3FD 0.35%, #FCF0FD 99.18%), #FFFFFF',
+    //@GSUpro fixes gradient
+    background:
+      'linear-gradient(120deg, rgba(233,74,116,0.19931722689075626) 0%, rgba(179,202,101,0.196516106442577) 99%)',
+    //@GSUpro fixes gradient end
     bannerIcon: staticFilesRuntimeUrl('/static/img/tokens/crv_steth_eth.png'),
     bannerGif: staticFilesRuntimeUrl('/static/img/tokens/crv_steth_eth.gif'),
     tags: ['lp-token'],

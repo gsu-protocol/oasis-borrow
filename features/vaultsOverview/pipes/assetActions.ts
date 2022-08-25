@@ -151,16 +151,18 @@ export function createAssetActions$(
     map(([assetActions, contextIsConnected]) => {
       const swapAction = contextIsConnected
         ? [
-            {
-              onClick: () => {
-                uiChanges.publish<SwapWidgetChangeAction>(SWAP_WIDGET_CHANGE_SUBJECT, {
-                  type: 'open',
-                  token,
-                })
-              },
-              text: 'Swap',
-              icon: 'exchange',
-            },
+            //@GSUpro remove swap
+            // {
+            //   onClick: () => {
+            //     uiChanges.publish<SwapWidgetChangeAction>(SWAP_WIDGET_CHANGE_SUBJECT, {
+            //       type: 'open',
+            //       token,
+            //     })
+            //   },
+            //   text: 'Swap',
+            //   icon: 'exchange',
+            // },
+            //@GSUpro remove swap end
           ]
         : []
       return [...swapAction, ...assetActions]
