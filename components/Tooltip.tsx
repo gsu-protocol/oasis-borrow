@@ -69,7 +69,7 @@ export function StatefulTooltip({
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       //@GSUpro fixes tooltip issue
-      sx={{ position: 'relative', ...containerSx }}
+      sx={{ ...containerSx }}
     >
       {children}
       {tooltipOpen && (
