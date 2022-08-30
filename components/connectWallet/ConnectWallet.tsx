@@ -201,7 +201,7 @@ function ConnectWalletButton({
                 transition: 'opacity ease-in 0.2s, transform ease-in 0.3s',
               }}
             >
-              <Icon sx={{ position: 'relative', top: '3px' }} name="arrow_right" />
+              <Icon sx={{ color: 'black', position: 'relative', top: '3px' }} name="arrow_right" />
             </Box>
           </Flex>
         </Flex>

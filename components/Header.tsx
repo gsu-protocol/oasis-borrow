@@ -866,7 +866,7 @@ function DisconnectedHeader() {
               <Icon
                 name="arrow_right"
                 size="15px"
-                sx={{ position: 'relative', left: '6px', transition: '0.2s' }}
+                sx={{ color: 'black', position: 'relative', left: '6px', transition: '0.2s' }}
               />
             </AppLink>
             <LanguageDropdown
