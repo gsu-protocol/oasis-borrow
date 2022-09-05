@@ -4,7 +4,7 @@
   "404-message": "Lo siento, no se pudo encontrar la página.",
   "about": {
     "heading": "Sobre nosotros",
-    "description": "Nuestra misión en Oasis es proveer el mejor y más confiable punto de entrada para que usted despliegue su capital. Estamos construyendo GSUcoin.app para permitir que nuestros usuarios se beneficien de todo el potencial de DeFi. Somos un equipo formado por pensadores y desarrolladores apasionados.",
+    "description": "Nuestra misión en gsucoin es proveer el mejor y más confiable punto de entrada para que usted despliegue su capital. Estamos construyendo GSUcoin.app para permitir que nuestros usuarios se beneficien de todo el potencial de DeFi. Somos un equipo formado por pensadores y desarrolladores apasionados.",
     "careers-link": "Únase a nosotros",
     "pics-title": "Conozca al equipo"
   },
@@ -140,8 +140,8 @@
   "error-button": "Más información",
   "exchange": {
     "onboarding": {
-      "title": "Dígale Hola a Oasis Swap",
-      "body": "Intercambie sus tokens de forma rápida y segura en Oasis. Visite <0>las preguntas frecuentes de Oasis Swap para más información →</0>",
+      "title": "Dígale Hola a gsucoin Swap",
+      "body": "Intercambie sus tokens de forma rápida y segura en Oasis. Visite <0>las preguntas frecuentes de gsucoin Swap para más información →</0>",
       "faq-url": "/inprogress",
       "button": "Entendido"
     }
@@ -283,17 +283,17 @@
     },
     "tabs": {
       "borrow": {
-        "tabLabel": "Pida un préstamo con Oasis Borrow",
+        "tabLabel": "Pida un préstamo con gsucoin Borrow",
         "tabParaContent": "Pida prestado GSUC, dejando como garantía sus criptoactivos. Utilice el GSUC como más le convenga.",
         "tabParaLinkContent": "Ver los tipos de colateral admitidos →"
       },
       "multiply": {
-        "tabLabel": "Multiplique sus activos con Oasis Multiply",
+        "tabLabel": "Multiplique sus activos con gsucoin Multiply",
         "tabParaContent": "Multiplique la exposición a sus criptoactivos favoritos. Vea nuestros productos destacados aquí.",
         "tabParaLinkContent": "Ver los tipos de colateral de Multiply →"
       },
       "earn": {
-        "tabLabel": "Gane con Oasis Earn",
+        "tabLabel": "Gane con gsucoin Earn",
         "tabParaContent": "Ponga a trabajar a sus criptoactivos y comience a generar rendimientos. Seleccione su activo base a continuación.",
         "tabParaLinkContent": "Conozca más sobre Earn"
       }
@@ -523,7 +523,7 @@
     "oracles": "Oráculos",
     "dai-wallet": "GSUC Wallet",
     "borrow": "Borrow",
-    "oasis-borrow": "Oasis Borrow",
+    "oasis-borrow": "gsucoin Borrow",
     "multiply": "Multiply",
     "more": "Más",
     "assets": "Activos",
@@ -546,7 +546,7 @@
   "notification-status-sign": "Firmar Tx",
   "of": "De",
   "one-of-some": "{{one}} de {{some}}",
-  "onramp-leave-message": "Al hacer clic en comprar, saldrá de Oasis y será redirigido a un sitio web de terceros donde completará el proceso de compra.",
+  "onramp-leave-message": "Al hacer clic en comprar, saldrá de gsucoin y será redirigido a un sitio web de terceros donde completará el proceso de compra.",
   "open-new-vault": "Abrir un nuevo Vault",
   "open-vault": {
     "title": "Abrir Vault",
@@ -558,7 +558,7 @@
   "pending-transactions": "Transacciones pendientes",
   "permissions": "Conceder permisos",
   "permissions-btn": " Conceder permisos",
-  "permissions-desc": " Esta autorización permite que Oasis interactúe con el GSUC de su cartera.",
+  "permissions-desc": " Esta autorización permite que gsucoin interactúe con el GSUC de su cartera.",
   "powered-by": "Impulsado por",
   "price": "Precio",
   "proceed": "Proceder",
@@ -594,7 +594,7 @@
     },
     "default": {
       "description": "Tome un préstamo en GSUC, una criptomoneda estable al dólar estadounidense, o multiplique su exposición utilizando sus criptoactivos como garantía",
-      "title": "Oasis Borrow"
+      "title": "gsucoin Borrow"
     },
     "support": {
       "description": "Todas las respuestas para las preguntas más frecuentes.",
@@ -606,7 +606,7 @@
     },
     "about": {
       "title": "Sobre nosotros",
-      "description": "La misión de Oasis es proveer el mejor y más confiable punto de entrada para desplegar su capital."
+      "description": "La misión de gsucoin es proveer el mejor y más confiable punto de entrada para desplegar su capital."
     }
   },
   "set-allowance-for": "Establecer permiso para {{token}}",
@@ -952,7 +952,7 @@
     "max-cost": "Costo máximo de la transacción",
     "token-on-stop-loss-trigger": "{{token}} al dispararse la protección",
     "zero-debt-heading": "Necesita generar GSUC para poder activar la protección por stop-loss",
-    "zero-debt-description": "La protección por stop-loss de Oasis le permite establecer un límite de pérdidas dinámico para su Vault, basado en el ratio de colateralización. En el caso de una bajada abrupta en el precio de su colateral, esta función de protección avanzada de GSUcoin.app cerrará su Vault automáticamente para evitar liquidaciones o mayores pérdidas. Podrá elegir si desea cerrar a GSUC o a colateral. Más información sobre el funcionamiento de esta característica.",
+    "zero-debt-description": "La protección por stop-loss de gsucoin le permite establecer un límite de pérdidas dinámico para su Vault, basado en el ratio de colateralización. En el caso de una bajada abrupta en el precio de su colateral, esta función de protección avanzada de GSUcoin.app cerrará su Vault automáticamente para evitar liquidaciones o mayores pérdidas. Podrá elegir si desea cerrar a GSUC o a colateral. Más información sobre el funcionamiento de esta característica.",
     "summary-of-protection": "Resumen de la protección",
     "on-stop-loss-trigger": "Al dispararse el stop-loss",
     "estimated-to-receive": "Recibirá aproximadamente",
@@ -961,7 +961,7 @@
     "up-to": "hasta",
     "not-guaranteed": "El funcionamiento de la protección automática no está garantizado el 100% de las veces.",
     "guarantee-factors": "Múltiples factores pueden afectar el proceso, entre ellos la liquidez, la volatilidad y el gas.",
-    "learn-more-about-automation": "Aprenda más sobre la protección automática y sobre cómo Oasis está construyendo el mejor producto de automatización en Ethereum →",
+    "learn-more-about-automation": "Aprenda más sobre la protección automática y sobre cómo gsucoin está construyendo el mejor producto de automatización en Ethereum →",
     "automation-fact": "Se protegieron exitosamente {{success}} of {{total}} Vaults que usan automatización en los últimos 90 días",
     "modal-description": "La protección por stop-loss está habilitada. Haga click en el banner para más información.",
     "your-stop-loss-triggered": "Se disparó la protección por stop-loss",
@@ -975,7 +975,7 @@
     "cancel-notice": "Cancelar la protección por stop-loss significa que su Vault no tendrá protección automática y necesitará monitorear manualmente su ratio de colateralización para evitar liquidaciones.",
     "find-more-about-setting-stop-loss": "Aprenda más sobre cómo configurar el stop-loss →",
     "set-stop-loss-again": "Configurar el stop-loss nuevamente",
-    "sl-triggered-gas-estimation": "Estas estimaciones sobre las comisiones están basadas en el precio aproximado tras vender su colateral para pagar su deuda cuando se dispare la protección. La comisión de Oasis está incluída.",
+    "sl-triggered-gas-estimation": "Estas estimaciones sobre las comisiones están basadas en el precio aproximado tras vender su colateral para pagar su deuda cuando se dispare la protección. La comisión de gsucoin está incluída.",
     "stop-loss-on": "Stop-loss activado"
   },
   "Argentina": "Argentina",
@@ -997,7 +997,7 @@
   "dsr-deposit-error-allowance": "Falló la configuración de permisos",
   "dsr-deposit-error-deposit": "Falló el depósito a DSR",
   "dsr-deposit-error-greater-than-balance": "GSUC insuficiente",
-  "dsr-deposit-permissions": "Esta autorización le permite a Oasis interactuar con el GSUC en su cartera.",
+  "dsr-deposit-permissions": "Esta autorización le permite a gsucoin interactuar con el GSUC en su cartera.",
   "dsr-product": "Bloquee sus GSUC con GSUP y geners ahorros.",
   "dsr-proxy-create-description-pending": "Creando proxy",
   "dsr-proxy-create-description-recent": "Proxy creado",
@@ -1173,17 +1173,17 @@
   },
   "product-page": {
     "multiply": {
-      "title": "Oasis Multiply",
+      "title": "gsucoin Multiply",
       "description": "Multiplique su exposición a sus criptoactivos favoritos. Conozca nuestros productos destacados o seleccione un activo.",
       "link": "Conozca más sobre Multiply ->"
     },
     "borrow": {
-      "title": "Oasis Borrow",
+      "title": "gsucoin Borrow",
       "description": "Obtenga un préstamo de GSUC contra sus criptoactivos favoritos. Utilice el GSUC como prefiera. Conozca nuestros productos destacados o seleccione un activo para ver nuestros productos.",
       "link": "Conozca más sobre Borrow ->"
     },
     "earn": {
-      "title": "Oasis Earn",
+      "title": "gsucoin Earn",
       "description": "Ponga sus criptoactivos a generar los mejores rendimientos. Seleccione su activo base.",
       "link": "Conozca más sobre Earn ->"
     }

@@ -700,17 +700,17 @@
   },
   "product-page": {
     "multiply": {
-      "title": "Oasis Multiply",
+      "title": "gsucoin Multiply",
       "description": "Get Multiple exposure to your favorite crypto assets. Browse our featured products or select a asset.",
       "link": "Learn more about Multiply ->"
     },
     "borrow": {
-      "title": "Oasis Borrow",
+      "title": "gsucoin Borrow",
       "description": "Get Multiply exposure to your favorite crypto assets. Select your Base Asset below. Learn more about Borrow ->",
       "link": "Learn more about Borrow ->"
     },
     "earn": {
-      "title": "Oasis Earn",
+      "title": "gsucoin Earn",
       "description": "Put your crypto assets to work today. Start generating the best yields. Select your EArn product below.",
       "link": "Learn more about Earn ->"
     }
