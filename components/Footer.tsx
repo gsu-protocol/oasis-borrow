@@ -62,7 +62,7 @@ const FOOTER_SECTIONS = [
         target: '_self',
       },
       { labelKey: 'nav.borrow', url: '/borrow' },
-      { labelKey: 'nav.multiply', url: '/multiply' },
+      // { labelKey: 'nav.multiply', url: '/multiply' },
     ],
   },
   //@GSUpro remove links ends

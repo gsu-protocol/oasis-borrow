@@ -234,27 +234,29 @@ export function HomepageView() {
           variant="large"
           useDropdownOnMobile
           sections={[
-            {
-              label: t('landing.tabs.multiply.tabLabel'),
-              value: 'multiply',
-              content: (
-                <HomepageTabLayout
-                  paraText={
-                    <>
-                      {t('landing.tabs.multiply.tabParaContent')}{' '}
-                      <AppLink href="/multiply" variant="inText">
-                        {t('landing.tabs.multiply.tabParaLinkContent')}
-                      </AppLink>
-                    </>
-                  }
-                  cards={
-                    <MultiplyProductCardsContainer
-                      ilks={productCardsConfig.landing.featuredCards['multiply']}
-                    />
-                  }
-                />
-              ),
-            },
+            //@GSUpro remove multiply
+            // {
+            //   label: t('landing.tabs.multiply.tabLabel'),
+            //   value: 'multiply',
+            //   content: (
+            //     <HomepageTabLayout
+            //       paraText={
+            //         <>
+            //           {t('landing.tabs.multiply.tabParaContent')}{' '}
+            //           <AppLink href="/multiply" variant="inText">
+            //             {t('landing.tabs.multiply.tabParaLinkContent')}
+            //           </AppLink>
+            //         </>
+            //       }
+            //       cards={
+            //         <MultiplyProductCardsContainer
+            //           ilks={productCardsConfig.landing.featuredCards['multiply']}
+            //         />
+            //       }
+            //     />
+            //   ),
+            // },
+            //@GSUpro remove multiply end
             {
               label: t('landing.tabs.borrow.tabLabel'),
               value: 'borrow',
@@ -380,19 +382,15 @@ export function HomepageView() {
           {t('landing.info-cards.get-started')}
         </Text>
         <Grid
+          //@GSUpro update info cards and remove mutiply
           gap={4}
           sx={{
-            maxWidth: '944px',
+            maxWidth: '854px',
             margin: 'auto',
-            gridTemplateColumns: ['1fr', '379px 1fr'],
-            gridTemplateAreas: [
-              'none',
-              `"left topRight"
-            "left bottomRight"`,
-            ],
+            gridTemplateColumns: ['1fr', '1fr 1fr'],
           }}
         >
-          <InfoCard
+          {/* <InfoCard
             title={t('landing.info-cards.multiply.multiply')}
             subtitle={t('landing.info-cards.multiply.subtitle')}
             links={[
@@ -407,11 +405,8 @@ export function HomepageView() {
               gridArea: [null, 'left'],
               backgroundSize: ['70%, cover', '300px, cover'],
             }}
-          />
+          /> */}
           <InfoCard
-            sx={{
-              gridArea: [null, 'topRight'],
-            }}
             title={t('landing.info-cards.borrow.borrow-dai')}
             subtitle={t('landing.info-cards.borrow.choose-your-preferred-token')}
             links={[
@@ -424,9 +419,6 @@ export function HomepageView() {
             backgroundImage=""
           />
           <InfoCard
-            sx={{
-              gridArea: [null, 'bottomRight'],
-            }}
             title={t('landing.info-cards.manage.manage-your-vault')}
             subtitle={t('landing.info-cards.manage.make-actions')}
             links={[
@@ -437,6 +429,7 @@ export function HomepageView() {
             ]}
             backgroundGradient="linear-gradient(-63deg, rgba(179,202,101,0.2) 0%, rgba(233,74,116,0.2) 100%)"
             backgroundImage=""
+            //@GSUpro update info cards and remove mutiply end
           />
         </Grid>
       </Box>

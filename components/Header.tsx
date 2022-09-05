@@ -455,7 +455,7 @@ const LINKS = {
   'dai-wallet': `${getConfig().publicRuntimeConfig.apiHost}/daiwallet`,
   learn: '/inprogress',
   blog: '/inprogres',
-  multiply: `/multiply`,
+  // multiply: `/multiply`,
   borrow: `/borrow`,
 }
 
@@ -493,7 +493,7 @@ function ConnectedHeader() {
             >
               <Logo />
               <Flex sx={{ ml: 5, zIndex: 1 }}>
-                <AppLink
+                {/* <AppLink
                   variant="links.navHeader"
                   href={LINKS.multiply}
                   sx={{
@@ -502,7 +502,7 @@ function ConnectedHeader() {
                   }}
                 >
                   {t('nav.multiply')}
-                </AppLink>
+                </AppLink> */}
                 <AppLink
                   variant="links.navHeader"
                   href={LINKS.borrow}
@@ -705,7 +705,7 @@ export function MobileMenu() {
   const [notificationsState] = useUIChanges<NotificationChange>(NOTIFICATION_CHANGE)
 
   const links = [
-    { labelKey: 'nav.multiply', url: LINKS.multiply },
+    // { labelKey: 'nav.multiply', url: LINKS.multiply },
     { labelKey: 'nav.borrow', url: LINKS.borrow },
     // { labelKey: 'nav.earn', url: LINKS.earn },
   ]
@@ -823,13 +823,13 @@ function DisconnectedHeader() {
         <BasicHeader variant="appContainer">
           <Grid sx={{ alignItems: 'center', columnGap: [4, 4, 5], gridAutoFlow: 'column', mr: 3 }}>
             <Logo />
-            <AppLink
+            {/* <AppLink
               variant="links.navHeader"
               href={LINKS.multiply}
               sx={{ color: navLinkColor(pathname.includes(LINKS.multiply)) }}
             >
               {t('nav.multiply')}
-            </AppLink>
+            </AppLink> */}
             <AppLink
               variant="links.navHeader"
               href={LINKS.borrow}
