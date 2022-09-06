@@ -58,7 +58,7 @@ const supportedTickers = [
 export async function getTickers(): Promise<CoinPapricaPriceResponse> {
   const res = await axios({
     method: 'get',
-    timeout: 1000,
+    timeout: 10000,
     url: 'https://api.coinpaprika.com/v1/tickers/',
     responseType: 'json',
     headers: {

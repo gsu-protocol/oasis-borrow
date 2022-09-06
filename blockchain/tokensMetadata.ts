@@ -675,15 +675,16 @@ const ALLOWED_AUTOMATION_ILKS: Record<string, string[]> = {
     'WBTC-A',
     'WBTC-B',
     'WBTC-C',
-    'WSTETH-A',
-    'WSTETH-C',
+    // 'WSTETH-A',
+    // 'WSTETH-C',
     'RENBTC-A',
-    'YFI-A',
+    // 'YFI-A',
     'UNI-A',
     'LINK-A',
     'MANA-A',
   ],
-  goerli: ['ETH-A', 'ETH-B', 'ETH-C', 'WSTETH-A', 'WBTC-A', 'WBTC-B', 'WBTC-C'],
+  goerli: ['ETH-A', 'ETH-B', 'ETH-C', 'WBTC-A', 'WBTC-B', 'WBTC-C'],
+  // goerli: ['ETH-A', 'ETH-B', 'ETH-C', 'WSTETH-A', 'WBTC-A', 'WBTC-B', 'WBTC-C'],
 }
 
 export function isSupportedAutomationIlk(network: string, ilk: string) {

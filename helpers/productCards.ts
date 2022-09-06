@@ -37,27 +37,27 @@ export type ProductLandingPagesFiltersKeys =
   | 'Featured'
   | 'ETH'
   | 'BTC'
-  | 'UNI LP'
-  | 'LINK'
-  | 'UNI'
-  | 'YFI'
-  | 'MANA'
-  | 'MATIC'
-  | 'GUSD'
-  | 'Curve LP'
+// | 'UNI LP'
+// | 'LINK'
+// | 'UNI'
+// | 'YFI'
+// | 'MANA'
+// | 'MATIC'
+// | 'GUSD'
+// | 'Curve LP'
 
 type ProductLandingPagesFiltersIcons =
   | 'star_circle'
   | 'eth_circle'
   | 'btc_circle'
-  | 'uni_lp_circle'
-  | 'link_circle'
-  | 'uni_circle'
-  | 'yfi_circle'
-  | 'mana_circle'
-  | 'matic_circle'
-  | 'gusd_circle'
-  | 'curve_circle'
+// | 'uni_lp_circle'
+// | 'link_circle'
+// | 'uni_circle'
+// | 'yfi_circle'
+// | 'mana_circle'
+// | 'matic_circle'
+// | 'gusd_circle'
+// | 'curve_circle'
 
 export type ProductLandingPagesFilter = {
   name: ProductLandingPagesFiltersKeys
@@ -73,11 +73,11 @@ export const supportedBorrowIlks = [
   'ETH-A',
   'ETH-B',
   'ETH-C',
-  'WSTETH-A',
+  // 'WSTETH-A',
   'WBTC-A',
   'WBTC-B',
   'WBTC-C',
-  'RENBTC-A',
+  // 'RENBTC-A',
   // @GSUpro remove unspported Ilks
   // 'LINK-A',
   // 'GUSD-A',
@@ -88,25 +88,25 @@ export const supportedBorrowIlks = [
   // 'UNIV2DAIUSDC-A',
   // 'CRVV1ETHSTETH-A',
   // @GSUpro remove unspported Ilks end
-  'WSTETH-B',
+  // 'WSTETH-B',
 ]
 
 export const supportedMultiplyIlks = [
   'ETH-A',
   'ETH-B',
   'ETH-C',
-  'WSTETH-A',
+  // 'WSTETH-A',
   'WBTC-A',
   'WBTC-B',
   'WBTC-C',
-  'RENBTC-A',
+  // 'RENBTC-A',
   // @GSUpro remove unspported Ilks
   // 'LINK-A',
   // 'YFI-A',
   // 'MANA-A',
   // 'MATIC-A',
   // @GSUpro remove unspported Ilks end
-  'WSTETH-B',
+  // 'WSTETH-B',
 ]
 
 export const supportedEarnIlks = ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A']
@@ -125,41 +125,42 @@ const genericFilters = {
     name: 'ETH',
     icon: 'eth_circle',
     urlFragment: 'eth',
-    tokens: ['ETH', 'WETH', 'wstETH', 'stETH'],
+    // tokens: ['ETH', 'WETH', 'wstETH', 'stETH'],
+    tokens: ['ETH', 'WETH'],
   },
   btc: { name: 'BTC', icon: 'btc_circle', urlFragment: 'btc', tokens: ['WBTC', 'renBTC'] },
-  unilp: {
-    name: 'UNI LP',
-    icon: 'uni_lp_circle',
-    urlFragment: 'unilp',
-    tokens: ['GUNIV3DAIUSDC1', 'GUNIV3DAIUSDC2'],
-  },
-  link: { name: 'LINK', icon: 'link_circle', urlFragment: 'link', tokens: ['LINK'] },
-  yfi: { name: 'YFI', icon: 'yfi_circle', urlFragment: 'yfi', tokens: ['YFI'] },
-  mana: { name: 'MANA', icon: 'mana_circle', urlFragment: 'mana', tokens: ['MANA'] },
-  matic: { name: 'MATIC', icon: 'matic_circle', urlFragment: 'matic', tokens: ['MATIC'] },
-  gusd: { name: 'GUSD', icon: 'gusd_circle', urlFragment: 'gusd', tokens: ['GUSD'] },
-  crvlp: { name: 'Curve LP', icon: 'curve_circle', urlFragment: 'crvlp', tokens: [] },
+  // unilp: {
+  //   name: 'UNI LP',
+  //   icon: 'uni_lp_circle',
+  //   urlFragment: 'unilp',
+  //   tokens: ['GUNIV3DAIUSDC1', 'GUNIV3DAIUSDC2'],
+  // },
+  // link: { name: 'LINK', icon: 'link_circle', urlFragment: 'link', tokens: ['LINK'] },
+  // yfi: { name: 'YFI', icon: 'yfi_circle', urlFragment: 'yfi', tokens: ['YFI'] },
+  // mana: { name: 'MANA', icon: 'mana_circle', urlFragment: 'mana', tokens: ['MANA'] },
+  // matic: { name: 'MATIC', icon: 'matic_circle', urlFragment: 'matic', tokens: ['MATIC'] },
+  // gusd: { name: 'GUSD', icon: 'gusd_circle', urlFragment: 'gusd', tokens: ['GUSD'] },
+  // crvlp: { name: 'Curve LP', icon: 'curve_circle', urlFragment: 'crvlp', tokens: [] },
 } as const
 
 const ilkToEntryTokenMap = {
   'ETH-A': 'ETH',
   'ETH-B': 'ETH',
   'ETH-C': 'ETH',
-  'WSTETH-A': 'WSTETH',
+  // 'WSTETH-A': 'WSTETH',
   'WBTC-A': 'WBTC',
   'WBTC-B': 'WBTC',
   'WBTC-C': 'WBTC',
-  'RENBTC-A': 'RENBTC',
-  'LINK-A': 'LINK',
-  'GUSD-A': 'GUSD',
-  'YFI-A': 'YFI',
-  'MANA-A': 'MANA',
-  'MATIC-A': 'MATIC',
+  // 'RENBTC-A': 'RENBTC',
+  // 'LINK-A': 'LINK',
+  // 'GUSD-A': 'GUSD',
+  // 'YFI-A': 'YFI',
+  // 'MANA-A': 'MANA',
+  // 'MATIC-A': 'MATIC',
   'UNIV2USDCETH-A': 'UNIV2USDCETH',
   'UNIV2DAIUSDC-A': 'UNIV2DAIUSDC',
   'CRVV1ETHSTETH-A': 'CRVV1ETHSTETH',
-  'WSTETH-B': 'WSTETH',
+  // 'WSTETH-B': 'WSTETH',
 }
 
 export type IlkTokenMap = { ilk: Ilk; token: string }
@@ -212,16 +213,19 @@ export const productCardsConfig: {
       // genericFilters.crvlp,
       //@GSUpro hide filters end
     ],
-    featuredCards: ['ETH-C', 'WBTC-C', 'CRVV1ETHSTETH-A', 'WSTETH-B'],
+    // featuredCards: ['ETH-C', 'WBTC-C', 'CRVV1ETHSTETH-A', 'WSTETH-B'],
+    featuredCards: ['ETH-C', 'WBTC-C', 'CRVV1ETHSTETH-A'],
     inactiveIlks: [],
     ordering: {
-      ETH: ['ETH-C', 'ETH-A', 'WSTETH-A', 'ETH-B'],
-      BTC: ['WBTC-C', 'RENBTC-A', 'WBTC-A', 'WBTC-B'],
+      // ETH: ['ETH-C', 'ETH-A', 'WSTETH-A', 'ETH-B'],
+      ETH: ['ETH-C', 'ETH-A', 'ETH-B'],
+      BTC: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
+      // BTC: ['WBTC-C', 'RENBTC-A', 'WBTC-A', 'WBTC-B'],
     },
     tags: {
       'ETH-C': 'lowest-fees-for-borrowing',
       'WBTC-C': 'lowest-fees-for-borrowing',
-      'WSTETH-A': 'staking-rewards',
+      // 'WSTETH-A': 'staking-rewards',
       'CRVV1ETHSTETH-A': 'staking-rewards',
     },
   },
@@ -237,16 +241,19 @@ export const productCardsConfig: {
       // genericFilters.matic,
       //@GSUpro hide filters end
     ],
-    featuredCards: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
+    // featuredCards: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
+    featuredCards: ['ETH-B', 'WBTC-B'],
     inactiveIlks: [],
     ordering: {
-      ETH: ['ETH-B', 'ETH-A', 'WSTETH-A', 'ETH-C'],
-      BTC: ['WBTC-B', 'WBTC-A', 'RENBTC-A', 'WBTC-C'],
+      ETH: ['ETH-B', 'ETH-A', 'ETH-C'],
+      // ETH: ['ETH-B', 'ETH-A', 'WSTETH-A', 'ETH-C'],
+      // BTC: ['WBTC-B', 'WBTC-A', 'RENBTC-A', 'WBTC-C'],
+      BTC: ['WBTC-B', 'WBTC-A', 'WBTC-C'],
     },
     tags: {
       'WBTC-B': 'max-exposure',
       'ETH-B': 'max-exposure',
-      'WSTETH-A': 'staking-rewards',
+      // 'WSTETH-A': 'staking-rewards',
     },
   },
   earn: {
@@ -262,9 +269,10 @@ export const productCardsConfig: {
         'ETH-C',
         'WBTC-C',
         // 'CRVV1ETHSTETH-A',
-        'WSTETH-B',
+        // 'WSTETH-B',
       ],
-      multiply: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
+      multiply: ['ETH-B', 'WBTC-B'],
+      // multiply: ['ETH-B', 'WBTC-B', 'WSTETH-A'],
       earn: ['GUNIV3DAIUSDC1-A', 'GUNIV3DAIUSDC2-A'],
     },
   },
@@ -272,21 +280,21 @@ export const productCardsConfig: {
     'ETH-A': 'medium-exposure-medium-cost',
     'ETH-B': 'biggest-multiply',
     'ETH-C': 'lowest-stabilityFee-and-cheapest',
-    'WSTETH-A': 'staking-rewards',
-    'WSTETH-B': 'lowest-annual-fee-cheapest-vault',
+    // 'WSTETH-A': 'staking-rewards',
+    // 'WSTETH-B': 'lowest-annual-fee-cheapest-vault',
     'WBTC-A': 'medium-exposure-medium-cost',
     'WBTC-B': 'biggest-multiply',
     'WBTC-C': 'lowest-stabilityFee-and-cheapest',
-    'RENBTC-A': 'great-borrowing-and-multiplying',
+    // 'RENBTC-A': 'great-borrowing-and-multiplying',
     'GUNIV3DAIUSDC1-A': 'guni',
     'GUNIV3DAIUSDC2-A': 'guni',
 
-    'GUSD-A': 'borrow',
-    'LINK-A': 'borrow-and-multiply',
-    'UNI-A': 'borrow-and-multiply',
-    'YFI-A': 'borrow-and-multiply',
-    'MANA-A': 'borrow-and-multiply',
-    'MATIC-A': 'borrow-and-multiply',
+    // 'GUSD-A': 'borrow',
+    // 'LINK-A': 'borrow-and-multiply',
+    // 'UNI-A': 'borrow-and-multiply',
+    // 'YFI-A': 'borrow-and-multiply',
+    // 'MANA-A': 'borrow-and-multiply',
+    // 'MATIC-A': 'borrow-and-multiply',
 
     'UNIV2DAIETH-A': 'lp-tokens',
     'UNIV2WBTCETH-A': 'lp-tokens',
@@ -343,31 +351,31 @@ export const productCardsConfig: {
         '/inprogress',
       name: 'GSUP (RENBTC-A)',
     },
-    'LINK-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (LINK-A)',
-    },
-    'MANA-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (MANA-A)',
-    },
-    'MATIC-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (MATIC-A)',
-    },
-    'GUSD-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (GUSD-A)',
-    },
-    'YFI-A': {
-      link:
-        '/inprogress',
-      name: 'GSUP (YFI-A)',
-    },
+    // 'LINK-A': {
+    //   link:
+    //     '/inprogress',
+    //   name: 'GSUP (LINK-A)',
+    // },
+    // 'MANA-A': {
+    //   link:
+    //     '/inprogress',
+    //   name: 'GSUP (MANA-A)',
+    // },
+    // 'MATIC-A': {
+    //   link:
+    //     '/inprogress',
+    //   name: 'GSUP (MATIC-A)',
+    // },
+    // 'GUSD-A': {
+    //   link:
+    //     '/inprogress',
+    //   name: 'GSUP (GUSD-A)',
+    // },
+    // 'YFI-A': {
+    //   link:
+    //     '/inprogress',
+    //   name: 'GSUP (YFI-A)',
+    // },
     'GUNIV3DAIUSDC1-A': {
       link: '/inprogress',
       name: 'GSUP/Gelato/Uniswap',
@@ -603,7 +611,6 @@ export function createProductCardsData$(
   if (visibleIlks.length === 0) {
     return of([])
   }
-
   const hydratedIlkData$ = supportedIlks$.pipe(
     switchMap((ilksSupportedOnNetwork) => {
       const displayedIlks = visibleIlks.filter((ilk) => ilksSupportedOnNetwork.includes(ilk))

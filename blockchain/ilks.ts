@@ -17,6 +17,8 @@ export function createIlksSupportedOnNetwork$(context$: Observable<Context>): Ob
         (join) =>
           ![
             //@GSUpro remove unsupported ilks
+            'WSTETH-A',
+            'WSTETH-B',
             'CRVV1ETHSTETH-A',
             'INST-ETH-A',
             'INST-WBTC-A',

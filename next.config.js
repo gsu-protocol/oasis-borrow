@@ -141,4 +141,5 @@ module.exports = withSentryConfig(conf, {
   org: 'block360-0e',
   project: 'gsu-demo',
   url: 'https://sentry.io/',
+  silent:true
 })

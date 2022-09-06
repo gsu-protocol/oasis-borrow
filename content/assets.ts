@@ -9,8 +9,8 @@ export const ASSETS_PAGES = [
     icon: 'ether_circle_color',
     descriptionKey: 'assets.eth.description',
     link: 'assets.eth.link',
-    multiplyIlks: ['ETH-B', 'ETH-A', 'WSTETH-A', 'ETH-C', 'WSTETH-B'],
-    borrowIlks: ['ETH-C', 'ETH-A', 'WSTETH-B', 'ETH-B', 'CRVV1ETHSTETH-A', 'WSTETH-A'],
+    multiplyIlks: ['ETH-B', 'ETH-A', 'ETH-C'],
+    borrowIlks: ['ETH-C', 'ETH-A', 'ETH-B', 'CRVV1ETHSTETH-A'],
   },
   {
     slug: 'btc',
@@ -19,8 +19,11 @@ export const ASSETS_PAGES = [
     icon: 'btc_circle_color',
     descriptionKey: 'assets.btc.description',
     link: 'assets.btc.link',
-    multiplyIlks: ['WBTC-B', 'WBTC-A', 'RENBTC-A', 'WBTC-C'],
-    borrowIlks: ['WBTC-C', 'RENBTC-A', 'WBTC-A', 'WBTC-B'],
+    multiplyIlks: ['WBTC-B', 'WBTC-A', 'WBTC-C'],
+    borrowIlks: ['WBTC-C', 'WBTC-A', 'WBTC-B'],
+    // multiplyIlks: ['WBTC-B', 'WBTC-A', 'RENBTC-A', 'WBTC-C'],
+    // borrowIlks: ['WBTC-C', 'RENBTC-A', 'WBTC-A', 'WBTC-B'],
+
   },
   //@GSUpro removes the token assets
   // {
