@@ -233,8 +233,8 @@ const hardhat: NetworkConfig = {
   id: '2137',
   name: 'hardhat',
   label: 'Hardhat',
-  infuraUrl: `https://testchain-dev.gsuprotocol.io/rpc`,
-  infuraUrlWS: `wss://testchain-dev.gsuprotocol.io/wss`,
+  infuraUrl: `http://localhost:8545`,
+  infuraUrlWS: `ws://localhost:8545`,
   cacheApi: 'https://oazo-bcache-mainnet-staging.new.oasis.app/api/v1',
   /* dssMultiplyProxyActions: contractDesc(
     dssMultiplyProxyActions,
