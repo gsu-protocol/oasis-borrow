@@ -128,7 +128,7 @@ function mapToPositionVM(vaults: PositionDetails[]): PositionVM[] {
         precision: 2,
         roundMode: BigNumber.ROUND_DOWN,
       })}`,
-      liquidity: `${formatCryptoBalance(position.ilkDebtAvailable)} DAI`,
+      liquidity: `${formatCryptoBalance(position.ilkDebtAvailable)} GSUc`,
       editLinkProps: {
         href: `/${position.id}`,
         hash: VaultViewMode.Overview,
