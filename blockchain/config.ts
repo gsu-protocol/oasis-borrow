@@ -128,7 +128,6 @@ const tokensMainnet = {
   // RENBTC: contractDesc(erc20, mainnetAddresses['RENBTC']),
 } as Dictionary<ContractDesc>
 
-
 const protoMain = {
   id: '1',
   name: 'main',
@@ -219,13 +218,85 @@ const kovan: NetworkConfig = {
 }
 
 const goerli: NetworkConfig = {
-  ...protoMain,
   id: '5',
   name: 'goerli',
   label: 'goerli',
   infuraUrl: `https://goerli.infura.io/v3/${infuraProjectId}`,
   infuraUrlWS: `wss://goerli.infura.io/ws/v3/${infuraProjectId}`,
-  cacheApi: 'https://oazo-bcache-goerli-staging.new.oasis.app/api/v1',
+  safeConfirmations: 6,
+  openVaultSafeConfirmations: 6,
+  // otc: contractDesc(otc, '0x0000000000000000000000000000000000000000'),
+  collaterals: getCollaterals(goerliAddresses, supportedIlks),
+  tokens: {
+    ...getCollateralTokens(goerliAddresses, supportedIlks),
+    WETH: contractDesc(eth, goerliAddresses.ETH),
+    DAI: contractDesc(erc20, goerliAddresses.MCD_DAI),
+    MKR: contractDesc(erc20, goerliAddresses['MCD_GOV']),
+    // STETH: contractDesc(erc20, goerliAddresses['STETH']),
+    // USDP: contractDesc(erc20, '0xd1a7a9d23f298192f8abf31243dd4f332d681d61'),
+  },
+  tokensMainnet: protoMain.tokensMainnet,
+  joins: {
+    ...getCollateralJoinContracts(goerliAddresses, supportedIlks),
+    // Todo: move to goerli network config when available at changelog.makerdao.com
+    // 'INST-ETH-A': '0x99507A436aC9E8eB5A89001a2dFc80E343D82122',
+    // 'INST-WBTC-A': '0xbd5978308C9BbF6d8d1D26cD1df9AA3EA83F782a',
+  },
+  getCdps: contractDesc(getCdps, goerliAddresses.GET_CDPS),
+  mcdOsms: getOsms(goerliAddresses, supportedIlks),
+  mcdPot: contractDesc(mcdPot, goerliAddresses.MCD_POT),
+  mcdJug: contractDesc(mcdJug, goerliAddresses.MCD_JUG),
+  mcdEnd: contractDesc(mcdEnd, goerliAddresses.MCD_END),
+  mcdSpot: contractDesc(mcdSpot, goerliAddresses.MCD_SPOT),
+  mcdDog: contractDesc(mcdDog, goerliAddresses.MCD_DOG),
+  // merkleRedeemer: contractDesc(merkleRedeemer, '0x23440aC6c8a10EA89132da74B705CBc6D99a805b'),
+  dssCharter: contractDesc(dssCharter, '0x7ea0d7ea31C544a472b55D19112e016Ba6708288'),
+  dssCdpManager: contractDesc(dssCdpManager, goerliAddresses.CDP_MANAGER),
+  // otcSupportMethods: contractDesc(otcSupport, '0x0000000000000000000000000000000000000000'),
+  vat: contractDesc(vat, goerliAddresses.MCD_VAT),
+  mcdJoinDai: contractDesc(mcdJoinDai, goerliAddresses.MCD_JOIN_DAI),
+  dsProxyRegistry: contractDesc(dsProxyRegistry, goerliAddresses.PROXY_REGISTRY),
+  dsProxyFactory: contractDesc(dsProxyFactory, goerliAddresses.PROXY_FACTORY),
+  dssProxyActions: contractDesc(dssProxyActions, goerliAddresses.PROXY_ACTIONS),
+  dssProxyActionsCharter: contractDesc(dssProxyActionsCharter, '0x0000'),
+  // cdpRegistry: contractDesc(cdpRegistry, '0x0636E6878703E30aB11Ba13A68C6124d9d252e6B'),
+  // dssProxyActionsCropjoin: contractDesc(dssProxyActionsCropjoin, '0x'),
+  // dssMultiplyProxyActions: contractDesc(
+  //   dssMultiplyProxyActions,
+  //   '0xc9628adc0a9f95D1d912C5C19aaBFF85E420a853',
+  // ),
+  // guniProxyActions: contractDesc(guniProxyActions, '0x'), // TODO: add address
+  // dssCropper: contractDesc(dssCropper, '0x00000'), // DOES NOT EXISTS
+  // guniResolver: '0x',
+  // guniRouter: '0x',
+  // automationBot: contractDesc(automationBot, '0xabDB63B4b3BA9f960CF942800a6982F88e9b1A6b'),
+  // automationBotAggregator: contractDesc(
+  //   automationBotAggregator,
+  //   '0xeb3c922A805FAEEac8f311E1AdF34fBC518099ab',
+  // ),
+  // serviceRegistry: '0x5A5277B8c8a42e6d8Ab517483D7D59b4ca03dB7F',
+  // defaultExchange: contractDesc(exchange, '0x2b0b4c5c58fe3CF8863c4948887099A09b84A69c'),
+  // lowerFeesExchange: contractDesc(exchange, '0x2b0b4c5c58fe3CF8863c4948887099A09b84A69c'),
+  // noFeesExchange: contractDesc(exchange, '0x2b0b4c5c58fe3CF8863c4948887099A09b84A69c'),
+  // Currently this is not supported on Goerli - no deployed contract
+  fmm: goerliAddresses.MCD_FLASH,
+  etherscan: {
+    url: 'https://goerli.etherscan.io',
+    apiUrl: 'https://api-goerli.etherscan.io/api',
+    apiKey: etherscanAPIKey || '',
+  },
+  ethtx: {
+    url: 'https://ethtx.info/goerli',
+  },
+  // taxProxyRegistries: [goerliAddresses.PROXY_REGISTRY],
+  // dssProxyActionsDsr: contractDesc(dssProxyActionsDsr, goerliAddresses.PROXY_ACTIONS_DSR),
+  magicLink: {
+    apiKey: '',
+  },
+  cacheApi: 'https://cache-goerli-staging.gsuprotocol.io/v1',
+  //cacheApi: 'http://localhost:3001/v1',
+  lidoCrvLiquidityFarmingReward: contractDesc(lidoCrvLiquidityFarmingReward, '0x00'),
+  // aaveTokens: {}
 }
 
 const hardhat: NetworkConfig = {
@@ -233,20 +304,20 @@ const hardhat: NetworkConfig = {
   id: '2137',
   name: 'hardhat',
   label: 'Hardhat',
-  infuraUrl: `http://localhost:8545`,
-  infuraUrlWS: `ws://localhost:8545`,
-  cacheApi: 'https://oazo-bcache-mainnet-staging.new.oasis.app/api/v1',
+  infuraUrl: `https://testchain-dev.gsuprotocol.io/rpc`,
+  infuraUrlWS: `wss://testchain-dev.gsuprotocol.io/wss`,
+  cacheApi: 'https://cache-goerli-dev.gsuprotocol.io/v1',
   /* dssMultiplyProxyActions: contractDesc(
-    dssMultiplyProxyActions,
-    getConfig()?.publicRuntimeConfig?.multiplyProxyActions ||
-      '0x2a49eae5cca3f050ebec729cf90cc910fadaf7a2',
-  ),
-  // guniProxyActions: contractDesc(guniProxyActions, '0xBEc49fA140aCaA83533fB00A2BB19bDdd0290f25'),
-  defaultExchange: contractDesc(
-    exchange,
-    getConfig()?.publicRuntimeConfig?.exchangeAddress ||
-      '0x4C4a2f8c81640e47606d3fd77B353E87Ba015584',
-  ), */
+   dssMultiplyProxyActions,
+   getConfig()?.publicRuntimeConfig?.multiplyProxyActions ||
+     '0x2a49eae5cca3f050ebec729cf90cc910fadaf7a2',
+ ),
+ // guniProxyActions: contractDesc(guniProxyActions, '0xBEc49fA140aCaA83533fB00A2BB19bDdd0290f25'),
+ defaultExchange: contractDesc(
+   exchange,
+   getConfig()?.publicRuntimeConfig?.exchangeAddress ||
+     '0x4C4a2f8c81640e47606d3fd77B353E87Ba015584',
+ ), */
 }
 
 export const networksById = keyBy([main, kovan, hardhat, goerli], 'id')
