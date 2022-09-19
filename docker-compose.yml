@@ -1,0 +1,16 @@
+version: "3.2"
+services:
+  # Building Image
+  gsu_fe_img:
+    build: .
+    image: gsu_fe_img
+  gsu_fe:
+    container_name: gsu_front-end
+    image: gsu_fe_img
+    env_file:
+      - .env
+    restart: unless-stopped
+    network_mode: host
+    depends_on:
+      - gsu_fe_img
+

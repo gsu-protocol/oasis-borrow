@@ -33,7 +33,7 @@ export function PageSEONoFollow() {
   )
 }
 
-const APP_URL = 'https://oasis.app'
+const APP_URL = 'https://gsucoin.app'
 
 export function PageSEOTags({
   title,
@@ -73,12 +73,12 @@ export function PageSEOTags({
       <meta name="twitter:card" content="summary_large_image" />
 
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Oasis" />
+      <meta property="og:site_name" content="GSUcoin" />
     </Head>
   )
 }
 
-const APP_NAME = 'Oasis'
+const APP_NAME = 'GSUcoin'
 
 export function PWATags() {
   return (

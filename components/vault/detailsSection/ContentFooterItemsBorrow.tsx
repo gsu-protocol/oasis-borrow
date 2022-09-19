@@ -28,22 +28,22 @@ export function ContentFooterItemsBorrow({
   changeVariant,
 }: ContentFooterItemsBorrowProps) {
   const { t } = useTranslation()
-
+  //@GSUpro update phrase DAI to GSUC
   const formatted = {
-    debt: `${formatAmount(debt, 'DAI')} DAI`,
+    debt: `${formatAmount(debt, 'DAI')} GSUC`,
     freeCollateral: `${formatAmount(freeCollateral, token)} ${token}`,
-    afterDebt: `${formatAmount(afterDebt, 'DAI')} DAI`,
+    afterDebt: `${formatAmount(afterDebt, 'DAI')} GSUC`,
     afterFreeCollateral: `${formatAmount(
       !afterFreeCollateral.isNegative() ? afterFreeCollateral : zero,
       token,
     )} ${token}`,
-    daiYieldFromLockedCollateral: `${formatAmount(daiYieldFromLockedCollateral, 'DAI')} DAI`,
+    daiYieldFromLockedCollateral: `${formatAmount(daiYieldFromLockedCollateral, 'DAI')} GSUC`,
     daiYieldFromTotalCollateral: `${formatAmount(
       !daiYieldFromTotalCollateral.isNegative() ? daiYieldFromTotalCollateral : zero,
       'DAI',
-    )} DAI`,
+    )} GSUC`,
   }
-
+  //@GSUpro update phrase DAI to GSUC end
   return (
     <>
       <DetailsSectionFooterItem

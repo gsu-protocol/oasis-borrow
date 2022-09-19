@@ -32,8 +32,8 @@ export function VaultIlkDetailsItem({
       onClick={
         isTouchDevice
           ? () => {
-              setTooltipOpen(!tooltipOpen)
-            }
+            setTooltipOpen(!tooltipOpen)
+          }
           : undefined
       }
       sx={{

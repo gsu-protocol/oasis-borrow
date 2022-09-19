@@ -82,13 +82,15 @@ export function ManageVaultChangesInformation(
       />
       <VaultChangesInformationItem
         label={`${t('system.vault-dai-debt')}`}
+        //@GSUpro update phrase DAI to GSUC
         value={
           <Flex>
-            {`${formatCryptoBalance(debt || zero)} DAI`}
+            {`${formatCryptoBalance(debt || zero)} GSUC`}
             <VaultChangesInformationArrow />
-            {`${formatCryptoBalance(afterDebt || zero)} DAI`}
+            {`${formatCryptoBalance(afterDebt || zero)} GSUC`}
           </Flex>
         }
+        //@GSUpro update phrase DAI to GSUC end
       />
       <VaultChangesInformationItem
         label={`${t('system.available-to-withdraw')}`}
@@ -102,13 +104,15 @@ export function ManageVaultChangesInformation(
       />
       <VaultChangesInformationItem
         label={`${t('system.available-to-generate')}`}
+        //@GSUpro update phrase DAI to GSUC
         value={
           <Flex>
-            {`${formatCryptoBalance(daiYieldFromLockedCollateral || zero)} DAI`}
+            {`${formatCryptoBalance(daiYieldFromLockedCollateral || zero)} GSUC`}
             <VaultChangesInformationArrow />
-            {`${formatCryptoBalance(daiYieldFromTotalCollateral || zero)} DAI`}
+            {`${formatCryptoBalance(daiYieldFromTotalCollateral || zero)} GSUC`}
           </Flex>
         }
+        //@GSUpro update phrase DAI to GSUC end
       />
       {txnCostDisplay}
     </VaultChangesInformationContainer>

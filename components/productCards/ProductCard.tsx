@@ -85,7 +85,7 @@ export function ProductCardProtocolLink({ ilk }: Partial<ProductCardData>) {
   return (
     <Box sx={{ paddingRight: '10px' }}>
       <AppLink href={link}>
-        <WithArrow variant="styles.a" gap="1">
+        <WithArrow sx={{ color: 'black', fontWeight: 500 }} variant="styles.a" gap="1">
           {name}
         </WithArrow>
       </AppLink>
@@ -107,10 +107,9 @@ function ProductCardBanner({ title, description }: ProductCardBannerProps) {
   return (
     <Box sx={{ position: 'relative' }}>
       <Card
-        opacity={0.7}
+        opacity={0.3}
         sx={{
           mixBlendMode: 'overlay',
-          backgroundColor: 'black',
           minHeight: contentHeight > 100 ? '140px' : '116px',
           border: 'unset',
         }}
@@ -180,7 +179,7 @@ function ProductCardHeading({
             {title}
           </Heading>
           <Text
-            sx={{ color: 'neutral80', pb: '12px', fontSize: '14px', textAlign: 'left' }}
+            sx={{ color: 'black', pb: '12px', fontSize: '14px', textAlign: 'left' }}
             variant="paragraph3"
           >
             {description}
@@ -303,16 +302,17 @@ export function ProductCard({
                 sx={{
                   width: '100%',
                   height: '54px',
+                  color: 'white',
                   fontWeight: 'semiBold',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.13)',
-                  backgroundColor: inactive || isFull ? 'neutral70' : 'primary100',
+                  backgroundColor: inactive || isFull ? 'neutral10' : 'rgb(233,87,117)',
                   '&:hover': {
                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
                     transition: '0.2s ease-in',
-                    backgroundColor: isFull ? 'neutral70' : 'primary100',
+                    backgroundColor: isFull ? 'neutral10' : 'rgba(233,87,117,0.9)',
                     cursor: isFull ? 'default' : 'pointer',
                   },
                 }}

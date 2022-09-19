@@ -70,7 +70,9 @@ function TitleWrapper({ title, badge, buttons }: TitleWrapperProps) {
         sx={{
           alignItems: 'center',
           height: '40px',
+          //@GSUpro fixes styles
           fontSize: 3,
+          //@GSUpro fixes styles end
           fontWeight: 600,
         }}
       >

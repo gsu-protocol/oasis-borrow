@@ -9,8 +9,8 @@ import { Box, Flex, Grid, Heading, Text } from 'theme-ui'
 
 import {
   BorrowProductCardsContainer,
-  EarnProductCardsContainer,
-  MultiplyProductCardsContainer,
+  // EarnProductCardsContainer,
+  // MultiplyProductCardsContainer,
 } from '../../components/productCards/ProductCardsContainer'
 
 export function AssetView({ content }: { content: AssetPageContent }) {
@@ -26,28 +26,29 @@ export function AssetView({ content }: { content: AssetPageContent }) {
         </Box>
       ),
     }
+    //GSUpro remove multiply
+    // const multiplyTab = content.multiplyIlks && {
+    //   label: t('landing.tabs.multiply.tabLabel'),
+    //   value: 'multiply',
+    //   content: (
+    //     <Box sx={{ mt: 5 }}>
+    //       <MultiplyProductCardsContainer ilks={content.multiplyIlks} />
+    //     </Box>
+    //   ),
+    // }
+    //GSUpro remove multiply end
 
-    const multiplyTab = content.multiplyIlks && {
-      label: t('landing.tabs.multiply.tabLabel'),
-      value: 'multiply',
-      content: (
-        <Box sx={{ mt: 5 }}>
-          <MultiplyProductCardsContainer ilks={content.multiplyIlks} />
-        </Box>
-      ),
-    }
+    // const earnTab = content.earnIlks && {
+    //   label: t('landing.tabs.earn.tabLabel'),
+    //   value: 'earn',
+    //   content: (
+    //     <Box sx={{ mt: 5 }}>
+    //       <EarnProductCardsContainer ilks={content.earnIlks} />
+    //     </Box>
+    //   ),
+    // }
 
-    const earnTab = content.earnIlks && {
-      label: t('landing.tabs.earn.tabLabel'),
-      value: 'earn',
-      content: (
-        <Box sx={{ mt: 5 }}>
-          <EarnProductCardsContainer ilks={content.earnIlks} />
-        </Box>
-      ),
-    }
-
-    return [borrowTab, multiplyTab, earnTab].filter((tab) => tab) as TabSection[]
+    return [borrowTab].filter((tab) => tab) as TabSection[]
   }
 
   return (

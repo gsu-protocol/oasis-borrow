@@ -67,7 +67,7 @@ export function SidebarManageGuniVaultEditingState(props: ManageMultiplyVaultSta
                   <Icon name={getToken('DAI').iconCircle} size="20px" sx={{ mr: 1 }} />
                   {t('minimum')} {t('after-closing', { token: 'DAI' })}
                 </Text>
-                <Text as="span">{formatCryptoBalance(afterCloseToDai)} DAI</Text>
+                <Text as="span">{formatCryptoBalance(afterCloseToDai)} GSUc</Text>
               </Text>
             </>
           )}

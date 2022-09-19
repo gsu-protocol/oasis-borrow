@@ -326,7 +326,7 @@ function VaultHistoryEntryDetails(event: VaultHistoryEvent) {
       <VaultHistoryEntryDetailsItem label={t('outstanding-debt')}>
         {'beforeDebt' in event && event.beforeDebt.gt(0) && (
           <>
-            {formatCryptoBalance(event.beforeDebt.times(event.rate)) + `DAI`}
+            {formatCryptoBalance(event.beforeDebt.times(event.rate)) + `GSUc`}
             <VaultChangesInformationArrow />
           </>
         )}

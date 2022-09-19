@@ -103,7 +103,7 @@ export function SidebarManageBorrowVault(props: ManageStandardBorrowVaultState) 
         },
         {
           label: t('system.actions.borrow.edit-dai'),
-          shortLabel: 'DAI',
+          shortLabel: 'GSUc',
           icon: getToken('DAI').iconCircle,
           panel: 'dai',
           action: () => {

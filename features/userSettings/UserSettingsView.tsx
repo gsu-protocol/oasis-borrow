@@ -268,9 +268,12 @@ function WalletInfo() {
         <Icon name={userIcon!} size={32} sx={{ mr: 2, flexShrink: 0 }} />
         <Grid sx={{ gap: 0, width: '100%' }}>
           <Flex sx={{ justifyContent: 'space-between' }}>
-            <Text variant="address" sx={{ fontSize: 2 }}>
+            {/*@GSUpro update style */}
+            <Text variant="address" sx={{ fontWeight: 600, fontSize: 5 }}>
+              {/*@GSUpro update style end*/}
               {formatAddress(account, 6)}
             </Text>
+
             <Text
               sx={{
                 color: 'interactive100',
@@ -293,7 +296,7 @@ function WalletInfo() {
           <Flex>
             {accountData && accountData.daiBalance && (
               <>
-                <Icon sx={{ zIndex: 1 }} name="dai_color" size={16} />
+                <Icon sx={{ zIndex: 1 }} name="gsu_circle_color" size={16} />
                 <Text variant="caption" sx={{ ml: 1, color: 'neutral80' }}>
                   {formatCryptoBalance(accountData.daiBalance)}
                 </Text>

@@ -19,8 +19,6 @@ export type SidebarAdjustStopLossEditingStageProps = Pick<
   | 'currentCollateralRatio'
   | 'ethBalance'
   | 'ethPrice'
-  | 'gasEstimation'
-  | 'gasEstimationUsd'
   | 'ilkData'
   | 'isEditing'
   | 'selectedSLValue'
@@ -38,8 +36,6 @@ export function SidebarAdjustStopLossEditingStage({
   currentCollateralRatio,
   ethBalance,
   ethPrice,
-  gasEstimation,
-  gasEstimationUsd,
   ilkData,
   isEditing,
   selectedSLValue,
@@ -72,7 +68,7 @@ export function SidebarAdjustStopLossEditingStage({
           <PickCloseState {...closePickerConfig} />
           <Text as="p" variant="paragraph3" sx={{ color: 'neutral80' }}>
             {t('protection.set-downside-protection-desc')}{' '}
-            <AppLink href="https://kb.oasis.app/help/stop-loss-protection" sx={{ fontSize: 2 }}>
+            <AppLink href="/inprogress" sx={{ fontSize: 2 }}>
               {t('here')}.
             </AppLink>
           </Text>
@@ -96,8 +92,6 @@ export function SidebarAdjustStopLossEditingStage({
             token={token}
             vault={vault}
             ilkData={ilkData}
-            gasEstimation={gasEstimation}
-            gasEstimationUsd={gasEstimationUsd}
             afterStopLossRatio={selectedSLValue}
             tokenPrice={tokenPrice}
             ethPrice={ethPrice}
@@ -114,7 +108,7 @@ export function SidebarAdjustStopLossEditingStage({
           <Text as="p" variant="paragraph3">
             {t('protection.guarantee-factors')}{' '}
             <AppLink
-              href="https://kb.oasis.app/help/stop-loss-protection"
+              href="/inprogress"
               sx={{ fontWeight: 'body' }}
             >
               {t('protection.learn-more-about-automation')}

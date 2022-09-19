@@ -47,7 +47,12 @@ function ContentCardLiquidationPriceModal({
 
   return (
     <Grid gap={2}>
-      <Heading variant="header3">{`${t('system.liquidation-price')}`}</Heading>
+      <Heading
+        variant="header3"
+        //@GSUpro updates styles
+        sx={{ fontSize: 1 }}
+        //@GSUpro updates styles end
+      >{`${t('system.liquidation-price')}`}</Heading>
       <Text as="p" variant="subheader" sx={{ fontSize: 2 }}>
         {!stopLossReadEnabled
           ? t('manage-multiply-vault.card.liquidation-price-description')

@@ -7,6 +7,7 @@ import { readOnlyEnhanceProvider } from 'blockchain/readOnlyEnhancedProviderProx
 import { SetupWeb3Context } from 'blockchain/web3Context'
 import { AppContextProvider } from 'components/AppContextProvider'
 import { CookieBanner } from 'components/CookieBanner'
+import { GasEstimationContextProvider } from 'components/GasEstimationContextProvider'
 import { HeadTags, PageSEOTags } from 'components/HeadTags'
 import { AppLayout, MarketingLayoutProps } from 'components/Layouts'
 import { CustomMDXLink } from 'components/Links'
@@ -41,7 +42,13 @@ function getLibrary(provider: any, connector: AbstractConnector | undefined): We
 
 const FTPolarFontBold = staticFilesRuntimeUrl('/static/fonts/FTPolar/FTPolarTrial-Bold')
 const FTPolarFontMedium = staticFilesRuntimeUrl('/static/fonts/FTPolar/FTPolarTrial-Medium')
-
+//@GSUpro add fonts
+const OpenSansRegular = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-Regular')
+const OpenSansBold = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-Bold')
+const OpenSansLight = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-Light')
+const OpenSansMedium = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-Medium')
+const OpenSansSemiBold = staticFilesRuntimeUrl('/static/fonts/OpenSans/OpenSans-SemiBold')
+//@GSUpro add fonts ends
 const globalStyles = `
   html,
   body,
@@ -91,6 +98,41 @@ const globalStyles = `
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('${OpenSansRegular}.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('${OpenSansMedium}.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('${OpenSansBold}.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('${OpenSansSemiBold}.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('${OpenSansLight}.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 `
 
@@ -167,12 +209,14 @@ function App({ Component, pageProps }: AppProps & CustomAppProps) {
                   {seoTags}
                   <SetupWeb3Context>
                     <SharedUIProvider>
-                      <NotificationSocketProvider>
-                        <Layout {...layoutProps}>
-                          <Component {...pageProps} />
-                          <CookieBanner setValue={setValue} value={value} />
-                        </Layout>
-                      </NotificationSocketProvider>
+                      <GasEstimationContextProvider>
+                        <NotificationSocketProvider>
+                          <Layout {...layoutProps}>
+                            <Component {...pageProps} />
+                            <CookieBanner setValue={setValue} value={value} />
+                          </Layout>
+                        </NotificationSocketProvider>
+                      </GasEstimationContextProvider>
                     </SharedUIProvider>
                   </SetupWeb3Context>
                 </ModalProvider>
