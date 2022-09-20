@@ -5,8 +5,6 @@ import { InfoCard } from 'components/InfoCard'
 import { AppLink } from 'components/Links'
 import {
   BorrowProductCardsContainer,
-  // EarnProductCardsContainer,
-  MultiplyProductCardsContainer,
 } from 'components/productCards/ProductCardsContainer'
 import { TabBar } from 'components/TabBar'
 import { LANDING_PILLS } from 'content/landing'

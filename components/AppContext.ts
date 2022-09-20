@@ -256,8 +256,6 @@ import {
   createProductCardsData$,
   createProductCardsWithBalance$,
   supportedBorrowIlks,
-  supportedEarnIlks,
-  supportedMultiplyIlks,
 } from '../helpers/productCards'
 import curry from 'ramda/src/curry'
 export type TxData =
