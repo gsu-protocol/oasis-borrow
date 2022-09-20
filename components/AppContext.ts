@@ -938,8 +938,8 @@ export function setupAppContext() {
       ilkToToken$,
       {
         borrow: supportedBorrowIlks,
-        multiply: supportedMultiplyIlks,
-        earn: supportedEarnIlks,
+        // multiply: supportedMultiplyIlks,
+        // earn: supportedEarnIlks,
       },
       uiChanges,
     ),

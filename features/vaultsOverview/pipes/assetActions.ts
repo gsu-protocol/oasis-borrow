@@ -56,20 +56,20 @@ function productCategoryToAssetAction(
         text: 'Borrow',
         icon: 'collateral',
       }
-    case 'multiply':
-      return {
-        path: getProductCategoryUrl('multiply'),
-        hash: urlFragment,
-        text: 'Multiply',
-        icon: 'copy',
-      }
-    case 'earn':
-      return {
-        path: getProductCategoryUrl('earn'),
-        hash: urlFragment,
-        text: 'Earn',
-        icon: 'increase',
-      }
+    // case 'multiply':
+    //   return {
+    //     path: getProductCategoryUrl('multiply'),
+    //     hash: urlFragment,
+    //     text: 'Multiply',
+    //     icon: 'copy',
+    //   }
+    // case 'earn':
+    //   return {
+    //     path: getProductCategoryUrl('earn'),
+    //     hash: urlFragment,
+    //     text: 'Earn',
+    //     icon: 'increase',
+    //   }
     default:
       throw new Error(`no asset action for productCategory ${productCategory}`)
   }

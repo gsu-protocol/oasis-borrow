@@ -182,10 +182,10 @@ function getPositionInfoItems(position: PositionVM): InfoItem[] {
           header: <Header name="variable-perc" />,
           info: position.variable,
         },
-        {
-          header: <Header name="protection" />,
-          info: <AutomationButton position={position} />,
-        },
+        // {
+        //   header: <Header name="protection" />,
+        //   info: <AutomationButton position={position} />,
+        // },
       ]
     case 'multiply':
       return [
@@ -207,10 +207,10 @@ function getPositionInfoItems(position: PositionVM): InfoItem[] {
           header: <Header name="funding-cost" />,
           info: position.fundingCost,
         },
-        {
-          header: <Header name="protection" />,
-          info: <AutomationButton position={position} />,
-        },
+        // {
+        //   header: <Header name="protection" />,
+        //   info: <AutomationButton position={position} />,
+        // },
       ]
     case 'earn':
       return [
