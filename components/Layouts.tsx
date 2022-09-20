@@ -187,7 +187,11 @@ export function MarketingLayout({
         header={<AppHeader />}
         footer={<Footer />}
         variant={variant || 'marketingContainer'}
-        sx={{ position: 'relative', background: `url(${marketingBackgrounds[topBackground]})` }}
+        sx={{
+          position: 'relative',
+          background: `url(${marketingBackgrounds[topBackground]})`,
+          minHeight: '900px',
+        }}
       >
         {children}
       </BasicLayout>
