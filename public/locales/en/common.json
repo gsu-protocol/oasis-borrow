@@ -450,7 +450,7 @@
       "dust-limit": "The Dust Limit specifies the minimum amount of GSUc that can be minted for this type of Vault. This value is also called the \"Debt Floor\"."
     },
     "card": {
-      "liquidation-price-description": "The Liquidation Price specifies the collateral price where your vault is subject to liquidation. If you think your vault is too close to liquidation price you can change your multiply vault to have a higher collateralization ratio, you can add more collateral on your own, or you can pay back some of your GSUc debt.",
+      "liquidation-price-description": "The Liquidation Price specifies the collateral price where your vault is subject to liquidation. If you think your vault is too close to liquidation price you can change your vault to have a higher collateralization ratio, you can add more collateral on your own, or you can pay back some of your GSUc debt.",
       "liquidation-price-description-AUTO": "The Liquidation Price is the price at which a Vault becomes vulnerable to liquidation.",
       "vault-protection-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, dictum est non quisque aenean ac velit adipiscing.",
       "liquidation-price-current": "Your current liquidation price is:",
