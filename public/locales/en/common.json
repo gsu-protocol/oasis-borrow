@@ -279,10 +279,10 @@
   "keyWithCount_plural": "{{count}} items",
   "landing": {
     "hero": {
-      "headlinePreAssetLandingPages": "Borrow GSUc and Multiply your exposure to GSUcoin",
+      "headlinePreAssetLandingPages": "Borrow GSUc",
       "subheaderPreAssetLandingPages": "Open a GSUP Vault, deposit 25+ crypto collaterals. Either borrow GSUc or buy additional collateral to increase your exposure.<0/> Connect a wallet to start.",
       "headline": "Deploy your crypto into GSUcoin",
-      "subheader": "Earn a yield, Multiply your exposure or Borrow against your crypto. ETH, BTC and 30 more cryptos available to put to work."
+      "subheader": "Borrow against your crypto. ETH, BTC and 30 more cryptos available to put to work."
     },
     "stats": {
       "30-day-volume": "30 Day Volume",
@@ -632,7 +632,7 @@
       "title": "GSUc"
     },
     "default": {
-      "description": "Borrow GSUc, a USD pegged Stablecoin, or multiply your exposure using crypto as your collateral",
+      "description": "Borrow GSUc, a Stablecoin, using crypto as your collateral",
       "title": "gsucoin.app"
     },
     "support": {
@@ -1210,12 +1210,12 @@
     "multiply": "A Vault designed to multiply your exposure to {{token}}",
     "borrow-and-multiply": "A vault for both multiplying your exposure or borrowing against {{token}}",
     "lp-tokens": "A vault for multiplying your exposure to {{token}}",
-    "medium-exposure-medium-cost": "Medium exposure, medium cost. Great for Borrowing or Multiplying",
+    "medium-exposure-medium-cost": "Medium exposure, medium cost. Great for Borrowing",
     "biggest-multiply": "The biggest possible Multiple to maximize your exposure to {{token}}",
     "lowest-stabilityFee-and-cheapest": "The lowest Stability Fee and cheapest Vault for borrowing using {{token}}",
     "lowest-annual-fee-cheapest-vault": "The lowest Annual Fee and cheapest Vault for borrowing using staked ETH",
-    "staking-rewards": "Great for Borrowing or Multiplying while earning staking rewards",
-    "great-borrowing-and-multiplying": "Great for Borrowing or Multiplying your {{token}}",
+    "staking-rewards": "Great for Borrowing while earning staking rewards",
+    "great-borrowing-and-multiplying": "Great for Borrowing your {{token}}",
     "guni": {
       "GUNIV3DAIUSDC2-A": "Earn on your GSUc with exposure to the GSUc/USDC 1bps pool on UNI V3",
       "GUNIV3DAIUSDC1-A": "Earn on your GSUc with exposure to the GSUc/USDC 5bps pool on UNI V3"
@@ -1279,11 +1279,11 @@
   "learn-more-about": "Learn more about",
   "assets": {
     "eth": {
-      "description": "ETH facilitates operations on the Ethereum network. It is used by network participants to execute their requested operations on it. We can think about it as the \"fuel\" of the network. You can maximize your ETH utility by Multiplying your exposure or Borrowing against your ETH.",
+      "description": "ETH facilitates operations on the Ethereum network. It is used by network participants to execute their requested operations on it. We can think about it as the \"fuel\" of the network. You can maximize your ETH utility by Borrowing against your ETH.",
       "link": "https://ethereum.org/en/eth/"
     },
     "btc": {
-      "description": "Bitcoin itself cannot be used directly, but needs to be moved onto the Ethereum Blockchain to use it in GSUcoin. Both wrapped Bitcoin (wbtc) and renBTC deliver the power of Bitcoin with the flexibility of an ERC20 token. Get the most of your Bitcoin Multiplying your exposure or Borrowing.",
+      "description": "Bitcoin itself cannot be used directly, but needs to be moved onto the Ethereum Blockchain to use it in GSUcoin. Both wrapped Bitcoin (wbtc) and renBTC deliver the power of Bitcoin with the flexibility of an ERC20 token. Get the most of your Bitcoin Borrowing.",
       "link": "https://wbtc.network/"
     },
     "usdc": {

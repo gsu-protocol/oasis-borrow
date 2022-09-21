@@ -802,11 +802,11 @@
     "multiply": "A Vault designed to multiply your exposure to {{token}}",
     "borrow-and-multiply": "A vault for both multiplying your exposure or borrowing against {{token}}",
     "lp-tokens": "A vault for multiplying your exposure to {{token}}",
-    "medium-exposure-medium-cost": "Medium exposure, medium cost. Great for Borrowing or Multiplying",
+    "medium-exposure-medium-cost": "Medium exposure, medium cost. Great for Borrowing",
     "biggest-multiply": "The biggest possible Multiple to maximize your exposure to {{token}}",
     "lowest-stabilityFee-and-cheapest": "The lowest Stability Fee and cheapest Vault for borrowing using {{token}}",
-    "staking-rewards": "Great for Borrowing or Multiplying while earning staking rewards",
-    "great-borrowing-and-multiplying": "Great for Borrowing or Multiplying your {{token}}",
+    "staking-rewards": "Great for Borrowing while earning staking rewards",
+    "great-borrowing-and-multiplying": "Great for Borrowing your {{token}}",
     "guni": {
       "GUNIV3DAIUSDC2-A": "Earn on your GSUC with exposure to the GSUC/USDC 1bps pool on UNI V3",
       "GUNIV3DAIUSDC1-A": "Earn on your GSUC with exposure to the GSUC/USDC 5bps pool on UNI V3"
