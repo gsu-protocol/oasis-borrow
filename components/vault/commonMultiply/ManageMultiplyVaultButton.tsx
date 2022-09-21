@@ -19,23 +19,27 @@ function manageMultiplyVaultButtonText(state: ManageMultiplyVaultState): string 
         : !state.proxyAddress
         ? t('setup-proxy')
         : state.insufficientCollateralAllowance
-        ? t('set-token-allowance', { token: state.vault.token })
+        ? t('set-token-allowance', {
+            token: state.vault.token === 'DAI' ? 'GSUc' : state.vault.token,
+          })
         : state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : state.originalEditingStage === 'otherActions' && state.otherAction === 'closeVault'
         ? t('close-vault')
         : t('confirm')
 
     case 'proxySuccess':
       return state.insufficientCollateralAllowance
-        ? t('set-token-allowance', { token: state.vault.token })
+        ? t('set-token-allowance', {
+            token: state.vault.token === 'DAI' ? 'GSUc' : state.vault.token,
+          })
         : state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : t('continue')
 
     case 'collateralAllowanceSuccess':
       return state.insufficientDaiAllowance
-        ? t('set-token-allowance', { token: 'DAI' })
+        ? t('set-token-allowance', { token: 'GSUc' })
         : t('continue')
 
     case 'daiAllowanceSuccess':
@@ -54,12 +58,14 @@ function manageMultiplyVaultButtonText(state: ManageMultiplyVaultState): string 
     case 'collateralAllowanceWaitingForConfirmation':
       return state.customCollateralAllowanceAmountEmpty
         ? t('enter-allowance-amount')
-        : t('set-token-allowance', { token: state.vault.token })
+        : t('set-token-allowance', {
+            token: state.vault.token === 'DAI' ? 'GSUc' : state.vault.token,
+          })
 
     case 'daiAllowanceWaitingForConfirmation':
       return state.customDaiAllowanceAmountEmpty
         ? t('enter-allowance-amount')
-        : t('set-token-allowance', { token: 'DAI' })
+        : t('set-token-allowance', { token: 'GSUc' })
 
     case 'collateralAllowanceFailure':
     case 'daiAllowanceFailure':

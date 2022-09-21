@@ -19,7 +19,7 @@ function openVaultPrimaryButtonText({
   customAllowanceAmountEmpty,
 }: OpenVaultState) {
   const { t } = useTranslation()
-
+  const token_ = token === 'DAI' ? 'GSUc' : token
   switch (stage) {
     case 'editing':
       return inputAmountsEmpty
@@ -27,7 +27,7 @@ function openVaultPrimaryButtonText({
         : !proxyAddress
         ? t('setup-proxy')
         : insufficientAllowance
-        ? t('set-token-allowance', { token })
+        ? t('set-token-allowance', { token: token_ })
         : t('confirm')
 
     case 'proxyWaitingForConfirmation':
@@ -38,12 +38,12 @@ function openVaultPrimaryButtonText({
     case 'proxyFailure':
       return t('retry-create-proxy')
     case 'proxySuccess':
-      return insufficientAllowance ? t('set-token-allowance', { token }) : t('continue')
+      return insufficientAllowance ? t('set-token-allowance', { token: token_ }) : t('continue')
 
     case 'allowanceWaitingForConfirmation':
       return customAllowanceAmountEmpty
         ? t('enter-allowance-amount')
-        : t('set-token-allowance', { token: token })
+        : t('set-token-allowance', { token: token_ })
 
     case 'allowanceWaitingForApproval':
     case 'allowanceInProgress':
@@ -84,6 +84,7 @@ export function OpenVaultButton(props: OpenVaultState) {
     depositAmount,
     generateAmount,
   } = props
+  const token_ = token === 'DAI' ? 'GSUc' : token
 
   function handleProgress(e: React.SyntheticEvent<HTMLButtonElement>) {
     e.preventDefault()
@@ -102,7 +103,9 @@ export function OpenVaultButton(props: OpenVaultState) {
 
   const primaryButtonText = openVaultPrimaryButtonText(props)
   const secondaryButtonText =
-    stage === 'allowanceFailure' ? t('edit-token-allowance', { token }) : t('edit-vault-details')
+    stage === 'allowanceFailure'
+      ? t('edit-token-allowance', { token: token_ })
+      : t('edit-vault-details')
 
   const firstCDP = accountData?.numberOfVaults ? accountData.numberOfVaults === 0 : undefined
   let trackingEvent: () => void | null
@@ -118,12 +121,12 @@ export function OpenVaultButton(props: OpenVaultState) {
     trackingEvent = () => trackingEvents.createVaultConfirm(firstCDP)
   if (primaryButtonText === t('create-proxy-btn'))
     trackingEvent = () => trackingEvents.createProxy(firstCDP)
-  if (stage === 'editing' && primaryButtonText === t('set-token-allowance', { token })) {
+  if (stage === 'editing' && primaryButtonText === t('set-token-allowance', { token: token_ })) {
     trackingEvent = () => trackingEvents.setTokenAllowance(firstCDP)
   }
   if (
     (stage === 'allowanceWaitingForConfirmation' &&
-      primaryButtonText === t('set-token-allowance', { token })) ||
+      primaryButtonText === t('set-token-allowance', { token: token_ })) ||
     primaryButtonText === t('retry-allowance-approval')
   ) {
     trackingEvent = () => trackingEvents.approveAllowance(firstCDP)
