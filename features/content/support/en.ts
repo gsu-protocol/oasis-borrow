@@ -4,7 +4,6 @@ export const content: ContentTypeSupport = {
   title: 'FAQ',
   navigation: [
     { title: 'Using GSUcoin.app', id: 'using-gsucoin' },
-    { title: 'Using GSUcoin Multiply', id: 'using-multiply' },
     { title: 'Using GSUcoin Wallet', id: 'using-gsucoin-wallet' },
     { title: 'Security', id: 'security' },
     { title: 'Buying GSUcoin', id: 'buying-gsucoin' },
@@ -144,8 +143,7 @@ export const content: ContentTypeSupport = {
         },
         {
           question: 'How can I convert my Multiply view back to a Borrow view?',
-          answer:
-            `if you have upgraded your Borrow Vault to a Multiply Vault in the GSUcoin UI and would like to swap it back, you can go to the "Borrow" tab in your vault's page, and then click on the "Go to Borrow Interface" button. It will ask you for confirmation, and if allowed, the Vault interface will be changed back to Borrow. You can switch back and forth the interface as many times as you want, as it does not require transactions.`,
+          answer: `if you have upgraded your Borrow Vault to a Multiply Vault in the GSUcoin UI and would like to swap it back, you can go to the "Borrow" tab in your vault's page, and then click on the "Go to Borrow Interface" button. It will ask you for confirmation, and if allowed, the Vault interface will be changed back to Borrow. You can switch back and forth the interface as many times as you want, as it does not require transactions.`,
         },
       ],
     },
