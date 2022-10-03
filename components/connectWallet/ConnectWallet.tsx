@@ -117,7 +117,7 @@ export async function getConnector(
     case 'portis':
       return new PortisConnector({
         networks: [network],
-        dAppId: 'e0ac7d6b-a19b-4f61-928d-fb97b15c424a',
+        dAppId: 'd1e6438b-2ae9-4cbf-940c-28d3719ea455',
       })
     case 'myetherwallet':
       return new MewConnectConnector({
