@@ -33,7 +33,7 @@ export function PageSEONoFollow() {
   )
 }
 
-const APP_URL = 'https://gsucoin.app'
+const APP_URL = process?.env?.API_HOST || 'https://gsucoin.app'
 
 export function PageSEOTags({
   title,
