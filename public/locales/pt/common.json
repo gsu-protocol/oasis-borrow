@@ -96,7 +96,7 @@
       "write-us": "Mande seu CV para "
     },
     "submit": "Enviar",
-    "title": "Contate a Oasis"
+    "title": "Contate a gsucoin"
   },
   "continue": "Continuar",
   "conversion-fee": "Taxa de conversão",
@@ -249,7 +249,7 @@
       },
       "faq": {
         "title": "Tem uma pergunta?",
-        "description": "Aprenda mais sobre Oasis, GSUC e DeFi em nossa FAQ"
+        "description": "Aprenda mais sobre gsucoin, GSUC e DeFi em nossa FAQ"
       }
     }
   },
@@ -489,7 +489,7 @@
   },
   "token-balance": "Saldo {{token}}",
   "token-depositing": "{{token}} depositando {{amount}}",
-  "tos": "Termos de Serviço da Oasis",
+  "tos": "Termos de Serviço da gsucoin",
   "tos-accept-message": "Antes de começar, você precisará ler e aceitar nossos termos de serviço.",
   "tos-accept-message-updated": "Antes de continuar, você precisará ler e aceitar nossos termos de serviço atualizados.",
   "tos-acceptance-check-in-progress": "Verificação de aceitação em andamento...",

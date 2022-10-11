@@ -360,7 +360,7 @@ export function ModalTrezorMetamaskEIP1559() {
         <Box>
           <Trans
             i18nKey="modal-trezor-eip1559-paragraph2"
-            components={[<AppLink sx={{ fontSize: 'inherit' }} href="https://legacy.oasis.app/" />]}
+            components={[<AppLink sx={{ fontSize: 'inherit' }} href="/inprogress" />]}
           />
         </Box>
         <Box>

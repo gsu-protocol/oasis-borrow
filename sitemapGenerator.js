@@ -2,7 +2,7 @@ const sitemap = require('nextjs-sitemap-generator')
 
 try {
   sitemap({
-    baseUrl: 'https://oasis.app',
+    baseUrl: 'https://gsucoin.app',
     pagesDirectory: `.next/server/pages`,
     targetDirectory: 'public/',
     ignoredPaths: [

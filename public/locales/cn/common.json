@@ -3,7 +3,7 @@
   "404-message": "抱歉，页面不存在。",
   "about": {
     "heading": "关于我们",
-    "description": "Oasis 的目标是为用户提供最好和最值得信任的方式来部署资金。我们开发 GSUcoin.app 让用户能在 DeFi 的领域获得最大的利益，\\n\\n 而我们的团队是由一群对区块链爱好者所组成。",
+    "description": "gsucoin 的目标是为用户提供最好和最值得信任的方式来部署资金。我们开发 GSUcoin.app 让用户能在 DeFi 的领域获得最大的利益，\\n\\n 而我们的团队是由一群对区块链爱好者所组成。",
     "careers-link": "加入我们",
     "pics-title": "团队"
   },
@@ -232,7 +232,7 @@
       },
       "faq": {
         "title": "有任何疑问吗？",
-        "description": "您可以在我们的常见问题页面了解更多关于 Oasis、Dai 和 DeFi 的信息"
+        "description": "您可以在我们的常见问题页面了解更多关于 gsucoin、Dai 和 DeFi 的信息"
       }
     }
   },
@@ -360,7 +360,7 @@
   "notification-status-sign": "签名交易",
   "of": "of",
   "one-of-some": "{{one}} of {{some}}",
-  "onramp-leave-message": "点击购买将离开 Oasis，并访问第三方网站完成购买过程。",
+  "onramp-leave-message": "点击购买将离开 gsucoin，并访问第三方网站完成购买过程。",
   "open-new-vault": "开启新金库",
   "open-vault": {
     "title": "开启金库",
@@ -392,7 +392,7 @@
   "pending-transactions": "确认中交易",
   "permissions": "设置许可",
   "permissions-btn": "设置许可",
-  "permissions-desc": "这将授权 Oasis 与你钱包中的 GSUC 进行交互。",
+  "permissions-desc": "这将授权 gsucoin 与你钱包中的 GSUC 进行交互。",
   "price": "Price",
   "powered-by": "Powered by",
   "proceed": "继续",
@@ -444,7 +444,7 @@
     },
     "about": {
       "title": "关于我们",
-      "description": "Oasis 的目标是为用户提供最好和最值得信任的方式来部署资金。我们开发 GSUcoin.app 让用户能在 DeFi 的领域获得最大的利益，\\n\\n 而我们的团队是由一群对区块链爱好者所组成。"
+      "description": "gsucoin 的目标是为用户提供最好和最值得信任的方式来部署资金。我们开发 GSUcoin.app 让用户能在 DeFi 的领域获得最大的利益，\\n\\n 而我们的团队是由一群对区块链爱好者所组成。"
     }
   },
   "set-allowance-for": "设置 {{token}} 许可额度",
@@ -490,7 +490,7 @@
   "tos-accept-message": "在开始之前，你需要阅读并接受我们的服务条款。",
   "tos-accept-message-updated": "在继续之前，你需要阅读并接受我们更新后的服务条款。",
   "tos-acceptance-check-in-progress": "许可检查进行中…",
-  "tos-desc": "通过创建一个储蓄金库，我接受 Oasis",
+  "tos-desc": "通过创建一个储蓄金库，我接受 gsucoin",
   "tos-jwt-signature-message": "你似乎第一次使用 GSUcoin.app 或正在通过新设备连接。为了安全起见，请用你的钱包签名以继续。",
   "tos-read": "我已阅读并接受服务条款。",
   "tos-view": "查看服务条款",
@@ -630,7 +630,7 @@
   "your-wallet": "你的钱包",
   "welcome": "欢迎来到全新的 GSUcoin.app",
   "read-blog-post": "阅览博客",
-  "visit-old-oasis": "前往旧版 Oasis",
+  "visit-old-gsucoin": "前往旧版 gsucoin",
   "oracles": {
     "header": "喂价机",
     "description": "可以在下方查看被 GSUP 金库所接受的抵押品类型的当前及下一个价格。这边的价格大部分是使用喂价安全模块(Oracle Stability Module, OSM)而得到，该模块一小时只会更新一次。因此，当发生价格骤跌时，用户仍有一小时可以做出反应。",
@@ -657,7 +657,7 @@
   },
   "newsletter": {
     "title": "Stay up to date with GSUcoin.app",
-    "subtitle": "Subscribe to the newsletter for Oasis updates",
+    "subtitle": "Subscribe to the newsletter for gsucoin updates",
     "placeholder": "Email Address",
     "button": "Subscribe",
     "success": "Thank you for subscribing the newsletter!",

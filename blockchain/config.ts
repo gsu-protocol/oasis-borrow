@@ -309,5 +309,5 @@ const hardhat: NetworkConfig = {
 export const networksById = keyBy([main, kovan, hardhat, goerli], 'id')
 export const networksByName = keyBy([main, kovan, hardhat, goerli], 'name')
 
-export const dappName = 'Oasis'
+export const dappName = 'gsucoin'
 export const pollingInterval = 12000
