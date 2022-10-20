@@ -9,7 +9,7 @@ import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { WithChildren } from 'helpers/types'
 import { useUIChanges } from 'helpers/uiChangesHook'
 import { useFeatureToggle } from 'helpers/useFeatureToggle'
-import { useOnboarding } from 'helpers/useOnboarding'
+// import { useOnboarding } from 'helpers/useOnboarding'
 import { useOutsideElementClickHandler } from 'helpers/useOutsideElementClickHandler'
 import { InitOptions } from 'i18next'
 import { useTranslation } from 'next-i18next'
@@ -22,16 +22,16 @@ import { useOnMobile } from 'theme/useBreakpointIndex'
 
 import { ContextConnected } from '../blockchain/network'
 import { LANDING_PILLS } from '../content/landing'
-import {
-  SWAP_WIDGET_CHANGE_SUBJECT,
-  SwapWidgetChangeAction,
-  SwapWidgetState,
-} from '../features/automation/protection/common/UITypes/SwapWidgetChange'
+// import {
+//   // SWAP_WIDGET_CHANGE_SUBJECT,
+//   // SwapWidgetChangeAction,
+//   // SwapWidgetState,
+// } from '../features/automation/protection/common/UITypes/SwapWidgetChange'
 import { useAppContext } from './AppContextProvider'
 import { MobileSidePanelPortal, ModalCloseIcon } from './Modal'
 import { NotificationsIconButton } from './notifications/NotificationsIconButton'
 import { useSharedUI } from './SharedUIProvider'
-import { UniswapWidgetShowHide } from './uniswapWidget/UniswapWidget'
+// import { UniswapWidgetShowHide } from './uniswapWidget/UniswapWidget'
 
 export function Logo({ sx }: { sx?: SxStyleProp }) {
   return (
@@ -47,7 +47,7 @@ export function Logo({ sx }: { sx?: SxStyleProp }) {
         ...sx,
       }}
     >
-      <Image src={staticFilesRuntimeUrl('/static/img/logo.svg')} />
+      <Image width="140px" src={staticFilesRuntimeUrl('/static/img/logo.png')} />
     </AppLink>
   )
 }
@@ -240,16 +240,16 @@ function ButtonDropdown({
 
 function UserDesktopMenu() {
   const { t } = useTranslation()
-  const { accountData$, context$, web3Context$, uiChanges } = useAppContext()
+  const { accountData$, context$, web3Context$ } = useAppContext()
   const [context] = useObservable(context$)
   const [accountData] = useObservable(accountData$)
   const [web3Context] = useObservable(web3Context$)
   const vaultCount = useVaultCount()
-  const [exchangeOnboarded] = useOnboarding('Exchange')
-  const [exchangeOpened, setExchangeOpened] = useState(false)
-  const [widgetUiChanges] = useObservable(
-    uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
-  )
+  // const [exchangeOnboarded] = useOnboarding('Exchange')
+  // const [exchangeOpened, setExchangeOpened] = useState(false)
+  // const [widgetUiChanges] = useObservable(
+  //   uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
+  // )
   const [notificationsState] = useUIChanges<NotificationChange>(NOTIFICATION_CHANGE)
 
   // TODO: Update this once the the notifications pannel is available
@@ -257,9 +257,9 @@ function UserDesktopMenu() {
   const notificationsRef = useOutsideElementClickHandler(() => setNotificationsPanelOpen(false))
   const notificationsToggle = useFeatureToggle('Notifications')
 
-  const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
+  // const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
 
-  const showNewUniswapWidgetBeacon = !exchangeOnboarded && !exchangeOpened
+  // const showNewUniswapWidgetBeacon = !exchangeOnboarded && !exchangeOpened
 
   const shouldHideSettings =
     !context ||
@@ -292,7 +292,8 @@ function UserDesktopMenu() {
         </PositionsLink>
         <PositionsButton sx={{ mr: 3, display: ['none', 'flex', 'none'] }} />
         <Box>
-          <Button
+          {/*@GSUpro  remove swap*/}
+          {/* <Button
             variant="menuButtonRound"
             onClick={() => {
               setExchangeOpened(true)
@@ -330,7 +331,8 @@ function UserDesktopMenu() {
               color={widgetOpen ? 'primary100' : 'inherit'}
             />
           </Button>
-          <UniswapWidgetShowHide />
+          <UniswapWidgetShowHide /> */}
+          {/*@GSUpro  remove swap*/}
         </Box>
 
         {!shouldHideSettings && (
@@ -451,25 +453,24 @@ function navLinkColor(isActive: boolean) {
 
 const LINKS = {
   'dai-wallet': `${getConfig().publicRuntimeConfig.apiHost}/daiwallet`,
-  learn: 'https://kb.oasis.app',
-  blog: 'https://blog.oasis.app',
-  multiply: `/multiply`,
+  learn: '/inprogress',
+  blog: '/inprogres',
+  // multiply: `/multiply`,
   borrow: `/borrow`,
-  earn: '/earn',
 }
 
 function ConnectedHeader() {
-  const { uiChanges } = useAppContext()
+  // const { uiChanges } = useAppContext()
   const { pathname } = useRouter()
   const { t } = useTranslation()
   const onMobile = useOnMobile()
-  const [widgetUiChanges] = useObservable(
-    uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
-  )
+  // const [widgetUiChanges] = useObservable(
+  //   uiChanges.subscribe<SwapWidgetState>(SWAP_WIDGET_CHANGE_SUBJECT),
+  // )
   // socket instance that can be used to emit events
   // const { socket } = useSocket()
 
-  const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
+  // const widgetOpen = widgetUiChanges && widgetUiChanges.isOpen
 
   return (
     <React.Fragment>
@@ -492,7 +493,7 @@ function ConnectedHeader() {
             >
               <Logo />
               <Flex sx={{ ml: 5, zIndex: 1 }}>
-                <AppLink
+                {/* <AppLink
                   variant="links.navHeader"
                   href={LINKS.multiply}
                   sx={{
@@ -501,7 +502,7 @@ function ConnectedHeader() {
                   }}
                 >
                   {t('nav.multiply')}
-                </AppLink>
+                </AppLink> */}
                 <AppLink
                   variant="links.navHeader"
                   href={LINKS.borrow}
@@ -509,13 +510,14 @@ function ConnectedHeader() {
                 >
                   {t('nav.borrow')}
                 </AppLink>
-                <AppLink
+                {/* // @GSUpro remove earn */}
+                {/* <AppLink
                   variant="links.navHeader"
                   href={LINKS.earn}
                   sx={{ mr: 4, color: navLinkColor(pathname.includes(LINKS.earn)) }}
                 >
                   {t('nav.earn')}
-                </AppLink>
+                </AppLink> */}
                 <AssetsDropdown />
               </Flex>
             </Flex>
@@ -531,7 +533,8 @@ function ConnectedHeader() {
             </Flex>
             <Flex sx={{ flexShrink: 0 }}>
               <PositionsButton sx={{ mr: 2 }} />
-              <Button
+              {/*@GSUpro  remove swap*/}
+              {/* <Button
                 variant="menuButtonRound"
                 onClick={() => {
                   uiChanges.publish<SwapWidgetChangeAction>(SWAP_WIDGET_CHANGE_SUBJECT, {
@@ -564,7 +567,8 @@ function ConnectedHeader() {
                   bottom: 'unset',
                   transform: 'translateX(-50%) translateY(-50%)',
                 }}
-              />
+              /> */}
+              {/*@GSUpro  remove swap end*/}
               <MobileMenu />
             </Flex>
             <MobileSettings />
@@ -701,9 +705,9 @@ export function MobileMenu() {
   const [notificationsState] = useUIChanges<NotificationChange>(NOTIFICATION_CHANGE)
 
   const links = [
-    { labelKey: 'nav.multiply', url: LINKS.multiply },
+    // { labelKey: 'nav.multiply', url: LINKS.multiply },
     { labelKey: 'nav.borrow', url: LINKS.borrow },
-    { labelKey: 'nav.earn', url: LINKS.earn },
+    // { labelKey: 'nav.earn', url: LINKS.earn },
   ]
 
   const closeMenu = useCallback(() => setIsOpen(false), [])
@@ -819,13 +823,13 @@ function DisconnectedHeader() {
         <BasicHeader variant="appContainer">
           <Grid sx={{ alignItems: 'center', columnGap: [4, 4, 5], gridAutoFlow: 'column', mr: 3 }}>
             <Logo />
-            <AppLink
+            {/* <AppLink
               variant="links.navHeader"
               href={LINKS.multiply}
               sx={{ color: navLinkColor(pathname.includes(LINKS.multiply)) }}
             >
               {t('nav.multiply')}
-            </AppLink>
+            </AppLink> */}
             <AppLink
               variant="links.navHeader"
               href={LINKS.borrow}
@@ -833,13 +837,13 @@ function DisconnectedHeader() {
             >
               {t('nav.borrow')}
             </AppLink>
-            <AppLink
+            {/* <AppLink
               variant="links.navHeader"
               href={LINKS.earn}
               sx={{ color: navLinkColor(pathname.includes(LINKS.earn)) }}
             >
               {t('nav.earn')}
-            </AppLink>
+            </AppLink> */}
             <AssetsDropdown />
           </Grid>
           <Grid sx={{ alignItems: 'center', columnGap: 3, gridAutoFlow: 'column' }}>
@@ -848,7 +852,7 @@ function DisconnectedHeader() {
               href="/connect"
               sx={{
                 boxShadow: 'cardLanding',
-                bg: 'neutral10',
+                bg: 'white',
                 textDecoration: 'none',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -862,7 +866,7 @@ function DisconnectedHeader() {
               <Icon
                 name="arrow_right"
                 size="15px"
-                sx={{ position: 'relative', left: '6px', transition: '0.2s' }}
+                sx={{ color: 'black', position: 'relative', left: '6px', transition: '0.2s' }}
               />
             </AppLink>
             <LanguageDropdown

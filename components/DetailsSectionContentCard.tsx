@@ -138,7 +138,9 @@ export function DetailsSectionContentCard({
       <Heading
         as="h3"
         variant="label"
+        //@GSUpro fixes styles
         sx={{ cursor: modal ? 'pointer' : 'auto' }}
+        //@GSUpro fixes styles end
         {...hightlightableItemEvents}
       >
         {title}
@@ -156,7 +158,12 @@ export function DetailsSectionContentCard({
       <Text
         as="p"
         variant="header2"
-        sx={{ maxWidth: '100%', lineHeight: 'loose', cursor: modal ? 'pointer' : 'auto' }}
+        sx={{
+          fontSize: '32px',
+          maxWidth: '100%',
+          lineHeight: 'loose',
+          cursor: modal ? 'pointer' : 'auto',
+        }}
         {...hightlightableItemEvents}
       >
         {value || '-'}

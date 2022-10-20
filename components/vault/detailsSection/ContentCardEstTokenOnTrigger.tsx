@@ -82,7 +82,7 @@ export function ContentCardEstTokenOnTrigger({
   const formatTokenOrDai = (val: BigNumber): string => {
     return isCollateralActive
       ? `${formatAmount(val, token)} ${token}`
-      : `${formatAmount(val.multipliedBy(currentOraclePrice), 'USD')} DAI`
+      : `${formatAmount(val.multipliedBy(currentOraclePrice), 'USD')} GSUc`
   }
 
   const formatted = {

@@ -75,17 +75,27 @@ function Question({ question, answer }: ContentQuestion) {
 
 function Navigation({ navigation }: { navigation: ContentNavigation[] }) {
   return (
-    <Flex sx={{ alignItems: 'center', justifyContent: 'center', flexDirection: ['column', 'row'] }}>
+    <Flex
+      sx={{
+        alignItems: 'center',
+        //@GSUpro fixes styles
+        justifyContent: ['center', 'center', 'center', 'space-between'],
+        flexDirection: ['column', 'column', 'column', 'row'],
+        //@GSUpro fixes styles end
+      }}
+    >
       {navigation.map(({ title, id }) => (
         <AppLink
           href="/support"
           hash={id}
           key={id}
           sx={{
-            mr: [0, 4],
+            //@GSUpro fixes styles
+            mr: [0, 3],
             textDecoration: 'none',
-            fontSize: 3,
-            fontWeight: 'heading',
+            fontSize: 2,
+            fontWeight: 600,
+            //@GSUpro fixes styles end
             color: 'primary60',
             cursor: 'pointer',
             position: 'relative',
@@ -105,7 +115,6 @@ function Navigation({ navigation }: { navigation: ContentNavigation[] }) {
               transform: 'translate(50%, -50%)',
             },
             '&:last-child': {
-              mr: 0,
               '&:before': {
                 display: ['block', 'none'],
               },
@@ -153,7 +162,9 @@ function SupportPage() {
       <Box mt={6} mb={5} sx={{ textAlign: 'center' }}>
         {cantFind}
         <AppLink
-          href={`${apiHost}/daiwallet/contact`}
+          //@GSUpro updates link
+          href={`${apiHost}/inprogress`}
+          //@GSUpro updates link end
           sx={{ color: 'primary100', textDecoration: 'underline', ml: 1 }}
         >
           {contactLink}

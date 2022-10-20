@@ -182,6 +182,7 @@ export function createExchangeQuote$(
 
       const dai = getTokenMetaData('DAI', tokensMainnet)
       const collateral = getTokenMetaData(token, tokensMainnet)
+      // console.log("GSUProtocol collateral: ",collateral)
 
       return getQuote$(dai, collateral, exchange.address, amount, slippage, action, protocols)
     }),

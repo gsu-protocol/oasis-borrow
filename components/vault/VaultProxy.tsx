@@ -4,15 +4,15 @@ import { WithArrow } from 'components/WithArrow'
 import { ManageBorrowVaultStage } from 'features/borrow/manage/pipes/manageVault'
 import { OpenVaultStage } from 'features/borrow/open/pipes/openVault'
 import { ManageMultiplyVaultStage } from 'features/multiply/manage/pipes/manageMultiplyVault'
+import { HasGasEstimation } from 'helpers/form'
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { CommonVaultState } from 'helpers/types'
 import { Trans, useTranslation } from 'next-i18next'
 import React from 'react'
 import { Box, Image, Text } from 'theme-ui'
 
-import { HasGasEstimation } from '../../helpers/form'
 import { TxStatusCardProgress, TxStatusCardSuccess } from './TxStatusCard'
-import { getEstimatedGasFeeText, VaultChangesInformationItem } from './VaultChangesInformation'
+import { getEstimatedGasFeeTextOld, VaultChangesInformationItem } from './VaultChangesInformation'
 
 export function VaultProxyStatusCard({
   stage,
@@ -75,7 +75,7 @@ export function VaultProxyContentBox({
               </Text>
               <VaultChangesInformationItem
                 label={t('transaction-fee')}
-                value={getEstimatedGasFeeText(gasData)}
+                value={getEstimatedGasFeeTextOld(gasData)}
               />
             </Box>
           )}
@@ -96,9 +96,11 @@ export function VaultProxySubtitle({
         stage === 'proxySuccess' ? 'vault-form.subtext.proxy-success' : 'vault-form.subtext.proxy'
       }
       components={{
+        //GSUpro update the "what-is-a-proxy-contract" link as it's not available yet
         1: (
-          <AppLink href="https://kb.oasis.app/help/what-is-a-proxy-contract" sx={{ fontSize: 2 }} />
+          <AppLink href="/inprogress" sx={{ fontSize: 2 }} />
         ),
+        //GSUpro end
         2: <WithArrow sx={{ display: 'inline', color: 'interactive100', fontWeight: 'body' }} />,
       }}
     />

@@ -1,6 +1,7 @@
 import { Icon } from '@makerdao/dai-ui-icons'
+import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import React from 'react'
-import { Flex, Text } from 'theme-ui'
+import { Flex, Image, Text } from 'theme-ui'
 
 import { AppLink } from './Links'
 import { Notice } from './Notice'
@@ -20,7 +21,7 @@ export function ReferralBanner({ heading, link }: ReferralBannerProps) {
         marginBottom: 0,
         overflow: 'hidden',
         borderRadius: '50px',
-        maxWidth: ['230px', '335px'],
+        maxWidth: ['230px', '350px'],
         p: '3px 8px 3px 4px',
         '&:hover': {
           opacity: '80%',
@@ -45,7 +46,7 @@ export function ReferralBanner({ heading, link }: ReferralBannerProps) {
         >
           <Flex
             sx={{
-              background: '#fee9bf',
+              background: 'rgb(249,208,220)',
               borderRadius: '50px',
               flexDirection: 'row',
               justifySelf: 'center',
@@ -56,13 +57,7 @@ export function ReferralBanner({ heading, link }: ReferralBannerProps) {
               mr: '8px',
             }}
           >
-            <Icon
-              name="dai_circle_color"
-              size="30px"
-              sx={{
-                transform: 'none !important',
-              }}
-            />
+            <Image src={staticFilesRuntimeUrl('/static/icons/favicon-32x32.png')} />
             <Text color="#5a4e3b" mx="4px" sx={{ fontSize: '14px', fontWeight: 'semiBold' }}>
               5%
             </Text>
@@ -76,7 +71,7 @@ export function ReferralBanner({ heading, link }: ReferralBannerProps) {
           >
             <Text
               variant="text.paragraph3"
-              sx={{ zIndex: 1, fontWeight: 'semiBold', wordBreak: 'normal' }}
+              sx={{ zIndex: 1, fontWeight: 'semiBold', wordBreak: 'normal', fontSize: ["12px", "14px"] }}
             >
               {`${heading.split('.')[0]}.`}
             </Text>
@@ -87,6 +82,7 @@ export function ReferralBanner({ heading, link }: ReferralBannerProps) {
                   zIndex: 1,
                   fontWeight: 'semiBold',
                   wordBreak: 'normal',
+                  fontSize: ["12px", "14px"],
                   whiteSpace: [null, 'pre'],
                 }}
               >

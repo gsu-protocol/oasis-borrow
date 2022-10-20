@@ -13,7 +13,7 @@ async function oasisStatsHandler(req: NextApiRequest, res: NextApiResponse) {
       if (stats.data) {
         return res.status(200).json(stats.data)
       } else {
-        return res.status(404).json({ error: 'Oasis stats unavailable' })
+        return res.status(404).json({ error: 'gsucoin stats unavailable' })
       }
     default:
       return res.status(405).end()

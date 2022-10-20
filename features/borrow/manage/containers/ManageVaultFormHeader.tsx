@@ -116,7 +116,12 @@ export function ManageVaultFormHeader(
                   ? t('vault-form.header.proxy-success')
                   : t('vault-form.header.proxy')
                 : isCollateralAllowanceStage
-                ? t('vault-form.header.allowance', { token: props.vault.token.toUpperCase() })
+                ? t('vault-form.header.allowance', {
+                    token:
+                      props.vault.token.toUpperCase() === 'DAI'
+                        ? 'GSUc'
+                        : props.vault.token.toUpperCase(),
+                  })
                 : isDaiAllowanceStage
                 ? t('vault-form.header.daiAllowance')
                 : isManageStage
@@ -139,12 +144,7 @@ export function ManageVaultFormHeader(
                     : 'vault-form.subtext.proxy'
                 }
                 components={{
-                  1: (
-                    <AppLink
-                      href="https://kb.oasis.app/help/what-is-a-proxy-contract"
-                      sx={{ fontSize: 2 }}
-                    />
-                  ),
+                  1: <AppLink href="/inprogress" sx={{ fontSize: 2 }} />,
                   2: (
                     <WithArrow
                       sx={{ display: 'inline', color: 'interactive100', fontWeight: 'body' }}

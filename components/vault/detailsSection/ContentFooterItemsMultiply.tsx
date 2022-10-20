@@ -27,16 +27,16 @@ export function ContentFooterItemsMultiply({
   changeVariant,
 }: ContentFooterItemsMultiplyProps) {
   const { t } = useTranslation()
-
+  //@GSUpro update phrase DAI to GSUC
   const formatted = {
-    debt: `${formatAmount(debt, 'DAI')} DAI`,
+    debt: `${formatAmount(debt, 'DAI')} GSUC`,
     lockedCollateral: `${formatCryptoBalance(lockedCollateral)} ${token}`,
     multiply: multiply?.toFixed(2),
-    afterDebt: `${formatAmount(afterDebt, 'DAI')} DAI`,
+    afterDebt: `${formatAmount(afterDebt, 'DAI')} GSUC`,
     afterLockedCollateral: `${formatCryptoBalance(afterLockedCollateral)} ${token}`,
     afterMultiply: afterMultiply?.toFixed(2),
   }
-
+  //@GSUpro update phrase DAI to GSUC end
   return (
     <>
       <DetailsSectionFooterItem

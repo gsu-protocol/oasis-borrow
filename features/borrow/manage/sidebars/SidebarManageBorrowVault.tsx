@@ -103,7 +103,7 @@ export function SidebarManageBorrowVault(props: ManageStandardBorrowVaultState) 
         },
         {
           label: t('system.actions.borrow.edit-dai'),
-          shortLabel: 'DAI',
+          shortLabel: 'GSUc',
           icon: getToken('DAI').iconCircle,
           panel: 'dai',
           action: () => {
@@ -111,15 +111,15 @@ export function SidebarManageBorrowVault(props: ManageStandardBorrowVaultState) 
             trackingEvents.switchToDai(accountIsController)
           },
         },
-        {
-          label: t('system.actions.borrow.switch-to-multiply'),
-          icon: 'circle_exchange',
-          iconShrink: 2,
-          panel: 'transition',
-          action: () => {
-            toggle!('multiplyTransitionEditing')
-          },
-        },
+        // {
+        //   label: t('system.actions.borrow.switch-to-multiply'),
+        //   icon: 'circle_exchange',
+        //   iconShrink: 2,
+        //   panel: 'transition',
+        //   action: () => {
+        //     toggle!('multiplyTransitionEditing')
+        //   },
+        // },
       ],
     },
     content: (

@@ -69,8 +69,10 @@ const cssPaths = (() => {
 const OnboardingGraphic = () => (
   <Box sx={{ position: 'relative' }}>
     <Image
-      src={staticFilesRuntimeUrl('/static/img/logo.svg')}
-      sx={{ position: 'absolute', top: '45px', left: '24px', width: '60.6px' }}
+      //GSUpro updates icon
+      src={staticFilesRuntimeUrl('/static/icons/GSUswap.png')}
+      //GSUpro updates icon end
+      sx={{ position: 'absolute', top: '24px', left: '24px', width: '60.6px' }}
     />
     <svg
       width="286"
@@ -379,9 +381,9 @@ export function UniswapWidget(props: { token?: string }) {
           ':hover': { borderColor: 'primary100', bg: 'neutral10' },
         },
         [main.token1Btn +
-        '[color="interactive100"], ' +
-        main.token2Btn +
-        '[color="interactive100"]']: {
+          '[color="interactive100"], ' +
+          main.token2Btn +
+          '[color="interactive100"]']: {
           border: '1px solid',
           borderColor: 'neutral20',
           ':hover': { borderColor: 'primary100', bg: 'neutral10' },

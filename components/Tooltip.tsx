@@ -68,10 +68,10 @@ export function StatefulTooltip({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
-      sx={containerSx}
+      sx={{ ...containerSx }}
     >
       {children}
-      {tooltipOpen && <Tooltip sx={tooltipSx}>{tooltip}</Tooltip>}
+      {tooltipOpen && <Tooltip sx={{ ...tooltipSx }}>{tooltip}</Tooltip>}
     </Flex>
   )
 }

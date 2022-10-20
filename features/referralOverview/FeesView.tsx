@@ -81,7 +81,7 @@ export function FeesView({ userReferral }: Props) {
               }}
               variant="strong"
             >
-              {`${userReferral.totalAmount}`} <span style={{ fontSize: '18px' }}>DAI</span>
+              {`${userReferral.totalAmount}`} <span style={{ fontSize: '18px' }}>GSUc</span>
             </Text>
           </Box>
           <Box sx={{ py: 1 }}>
@@ -106,7 +106,7 @@ export function FeesView({ userReferral }: Props) {
                   ? '0.0'
                   : userReferral.totalClaim}
                 {` `}
-                <span style={{ fontSize: '18px' }}>DAI</span>
+                <span style={{ fontSize: '18px' }}>GSUc</span>
               </Text>
             </Box>
           </Box>

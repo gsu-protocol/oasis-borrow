@@ -164,7 +164,7 @@ export function Summary({ summary }: { summary: VaultSummary }) {
           </Text>
           <Text variant="header2" sx={{ mt: 2 }}>
             {formatCryptoBalance(summary.totalDaiDebt)}
-            <Text sx={{ fontSize: '20px', display: 'inline', ml: 2 }}>DAI</Text>
+            <Text sx={{ fontSize: '20px', display: 'inline', ml: 2 }}>GSUc</Text>
           </Text>
         </Box>
         <Box sx={{ gridRow: ['initial', '2/3', 'auto'] }}>

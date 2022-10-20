@@ -21,16 +21,16 @@ export type Feature =
 const configuredFeatures: Record<Feature, boolean> = {
   TestFeature: false, // used in unit tests
   AnotherTestFeature: true, // used in unit tests
-  Automation: true,
+  Automation: false,
   AutomationBasicBuyAndSell: false,
-  StopLossRead: true,
-  StopLossWrite: true,
+  StopLossRead: false,
+  StopLossWrite: false,
   BatchCache: false,
   StopLossOpenFlow: false,
-  BasicBS: true,
+  BasicBS: false,
   ReadOnlyBasicBS: false,
   Notifications: false,
-  Referrals: true,
+  Referrals: false,
   ConstantMultiple: false,
   // your feature here....
 }

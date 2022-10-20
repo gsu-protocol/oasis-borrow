@@ -1,9 +1,14 @@
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
 import { useTranslation } from 'next-i18next'
+import getConfig from 'next/config'
 import Head from 'next/head'
 import React from 'react'
 
 import { useTheme } from '../theme/useThemeUI'
+
+const {
+  publicRuntimeConfig: { apiHost },
+} = getConfig()
 
 export function HeadTags() {
   const { theme } = useTheme()
@@ -33,8 +38,7 @@ export function PageSEONoFollow() {
   )
 }
 
-const APP_URL = 'https://oasis.app'
-
+const APP_URL = apiHost || 'https://gsucoin.app'
 export function PageSEOTags({
   title,
   description,
@@ -73,12 +77,12 @@ export function PageSEOTags({
       <meta name="twitter:card" content="summary_large_image" />
 
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Oasis" />
+      <meta property="og:site_name" content="GSUcoin" />
     </Head>
   )
 }
 
-const APP_NAME = 'Oasis'
+const APP_NAME = 'GSUcoin'
 
 export function PWATags() {
   return (

@@ -1,29 +1,26 @@
 import { Icon } from '@makerdao/dai-ui-icons'
 import BigNumber from 'bignumber.js'
-import { ReferralBanner } from 'components/ReferralBanner'
+import { useAppContext } from 'components/AppContextProvider'
+import { InfoCard } from 'components/InfoCard'
+import { AppLink } from 'components/Links'
+import {
+  BorrowProductCardsContainer,
+} from 'components/productCards/ProductCardsContainer'
 import { TabBar } from 'components/TabBar'
 import { LANDING_PILLS } from 'content/landing'
-import { NewReferralModal } from 'features/referralOverview/NewReferralModal'
+// import { NewReferralModal } from 'features/referralOverview/NewReferralModal'
 import { TermsOfService } from 'features/termsOfService/TermsOfService'
 import { formatAsShorthandNumbers } from 'helpers/formatters/format'
+import { useObservable } from 'helpers/observableHook'
+import { productCardsConfig } from 'helpers/productCards'
 import { useFeatureToggle } from 'helpers/useFeatureToggle'
 import { useLocalStorage } from 'helpers/useLocalStorage'
 import { Trans, useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { Box, Flex, Grid, Heading, SxProps, SxStyleProp, Text } from 'theme-ui'
+import { fadeInAnimation, slideInAnimation } from 'theme/animations'
 
-import { useAppContext } from '../../components/AppContextProvider'
-import { InfoCard } from '../../components/InfoCard'
-import { AppLink } from '../../components/Links'
-import {
-  BorrowProductCardsContainer,
-  EarnProductCardsContainer,
-  MultiplyProductCardsContainer,
-} from '../../components/productCards/ProductCardsContainer'
-import { useObservable } from '../../helpers/observableHook'
-import { productCardsConfig } from '../../helpers/productCards'
-import { fadeInAnimation, slideInAnimation } from '../../theme/animations'
 import { NewsletterSection } from '../newsletter/NewsletterView'
 
 interface PillProps {
@@ -41,7 +38,7 @@ function Pill(props: PillProps) {
         justifyContent: 'center',
         alignItems: 'center',
         minWidth: 140,
-        background: 'rgba(255, 255, 255, 0.5)',
+        background: 'rgba(255, 255, 255)',
         mx: 2,
         my: 2,
         borderRadius: 'round',
@@ -147,11 +144,12 @@ export function HomepageView() {
   const { t } = useTranslation()
 
   const referralsEnabled = useFeatureToggle('Referrals')
+  const notificationsEnabled = useFeatureToggle('Notifications')
   const { context$, checkReferralLocal$, userReferral$ } = useAppContext()
   const [context] = useObservable(context$)
   const [checkReferralLocal] = useObservable(checkReferralLocal$)
   const [userReferral] = useObservable(userReferral$)
-  const [landedWithRef, setLandedWithRef] = useState('')
+  const [, setLandedWithRef] = useState('')
   const [localReferral, setLocalReferral] = useLocalStorage('referral', null)
 
   const router = useRouter()
@@ -173,7 +171,7 @@ export function HomepageView() {
         flex: 1,
       }}
     >
-      {referralsEnabled && (
+      {/*{referralsEnabled && (
         <Flex
           sx={{
             justifyContent: 'center',
@@ -189,8 +187,8 @@ export function HomepageView() {
       )}
       {referralsEnabled && landedWithRef && context?.status === 'connectedReadonly' && (
         <NewReferralModal />
-      )}
-      {referralsEnabled && userReferral?.referrer && <TermsOfService userReferral={userReferral} />}
+      )}*/}
+      {(referralsEnabled || notificationsEnabled) && <TermsOfService userReferral={userReferral} />}
       <Hero
         isConnected={context?.status === 'connected'}
         sx={{
@@ -234,27 +232,29 @@ export function HomepageView() {
           variant="large"
           useDropdownOnMobile
           sections={[
-            {
-              label: t('landing.tabs.multiply.tabLabel'),
-              value: 'multiply',
-              content: (
-                <HomepageTabLayout
-                  paraText={
-                    <>
-                      {t('landing.tabs.multiply.tabParaContent')}{' '}
-                      <AppLink href="/multiply" variant="inText">
-                        {t('landing.tabs.multiply.tabParaLinkContent')}
-                      </AppLink>
-                    </>
-                  }
-                  cards={
-                    <MultiplyProductCardsContainer
-                      ilks={productCardsConfig.landing.featuredCards['multiply']}
-                    />
-                  }
-                />
-              ),
-            },
+            //@GSUpro remove multiply
+            // {
+            //   label: t('landing.tabs.multiply.tabLabel'),
+            //   value: 'multiply',
+            //   content: (
+            //     <HomepageTabLayout
+            //       paraText={
+            //         <>
+            //           {t('landing.tabs.multiply.tabParaContent')}{' '}
+            //           <AppLink href="/multiply" variant="inText">
+            //             {t('landing.tabs.multiply.tabParaLinkContent')}
+            //           </AppLink>
+            //         </>
+            //       }
+            //       cards={
+            //         <MultiplyProductCardsContainer
+            //           ilks={productCardsConfig.landing.featuredCards['multiply']}
+            //         />
+            //       }
+            //     />
+            //   ),
+            // },
+            //@GSUpro remove multiply end
             {
               label: t('landing.tabs.borrow.tabLabel'),
               value: 'borrow',
@@ -276,28 +276,30 @@ export function HomepageView() {
                 />
               ),
             },
+            //@GSUpro removes earn
 
-            {
-              label: t('landing.tabs.earn.tabLabel'),
-              value: 'earn',
-              content: (
-                <HomepageTabLayout
-                  paraText={
-                    <>
-                      {t('landing.tabs.earn.tabParaContent')}{' '}
-                      <AppLink href="/earn" variant="inText">
-                        {t('landing.tabs.earn.tabParaLinkContent')}
-                      </AppLink>
-                    </>
-                  }
-                  cards={
-                    <EarnProductCardsContainer
-                      ilks={productCardsConfig.landing.featuredCards['earn']}
-                    />
-                  }
-                />
-              ),
-            },
+            // {
+            //   label: t('landing.tabs.earn.tabLabel'),
+            //   value: 'earn',
+            //   content: (
+            //     <HomepageTabLayout
+            //       paraText={
+            //         <>
+            //           {t('landing.tabs.earn.tabParaContent')}{' '}
+            //           <AppLink href="/earn" variant="inText">
+            //             {t('landing.tabs.earn.tabParaLinkContent')}
+            //           </AppLink>
+            //         </>
+            //       }
+            //       cards={
+            //         <EarnProductCardsContainer
+            //           ilks={productCardsConfig.landing.featuredCards['earn']}
+            //         />
+            //       }
+            //     />
+            //   ),
+            // },
+            //@GSUpro removes earn end
           ]}
         />
       </Box>
@@ -325,20 +327,20 @@ export function HomepageView() {
             subtitle={t('landing.info-cards.learn.deep-dive')}
             links={[
               {
-                href: 'https://kb.oasis.app/help/getting-started',
+                href: '/inprogress',
                 text: t('landing.info-cards.learn.get-started'),
               },
               {
-                href: 'https://kb.oasis.app/help/tutorials',
+                href: '/inprogress',
                 text: t('landing.info-cards.learn.tutorials'),
               },
               {
-                href: 'https://kb.oasis.app/help/borrow',
+                href: '/inprogress',
                 text: t('landing.info-cards.learn.key-concepts'),
               },
             ]}
-            backgroundGradient="linear-gradient(127.5deg, #EEE1F9 0%, #FFECE8 56.77%, #DDFFF7 100%)"
-            backgroundImage="/static/img/info_cards/cubes_nov27.png"
+            backgroundGradient="linear-gradient(48deg, rgba(179,95,255,0.25) 0%, rgba(233,74,116,0.25) 100%)"
+            backgroundImage=""
           />
           <InfoCard
             title={t('landing.info-cards.support.support')}
@@ -349,20 +351,20 @@ export function HomepageView() {
                 text: t('landing.info-cards.support.faq'),
               },
               {
-                href: 'https://discord.gg/oasisapp',
+                href: 'https://discord.com/invite/cm3tmM37W3',
                 text: t('landing.info-cards.support.discord'),
               },
               {
-                href: '/daiwallet/contact',
+                href: '/inprogress',
                 text: t('landing.info-cards.support.contact-us'),
               },
               {
-                href: 'https://twitter.com/oasisdotapp',
+                href: 'https://twitter.com/GSUcoin',
                 text: t('landing.info-cards.support.twitter'),
               },
             ]}
-            backgroundGradient="linear-gradient(135.35deg, #FEF7FF 0.6%, #FEE9EF 100%), radial-gradient(261.45% 254.85% at 3.41% 2.19%, #FFFADD 0%, #FFFBE3 0.01%, #F0FFF2 52.6%, #FBEDFD 100%)"
-            backgroundImage="/static/img/info_cards/bubbles.png"
+            backgroundGradient="linear-gradient(-63deg, rgba(233,74,116,0.2) 0%, rgba(179,95,255,0.2) 100%)"
+            backgroundImage=""
           />
         </Grid>
       </Box>
@@ -378,19 +380,15 @@ export function HomepageView() {
           {t('landing.info-cards.get-started')}
         </Text>
         <Grid
+          //@GSUpro update info cards and remove mutiply
           gap={4}
           sx={{
-            maxWidth: '944px',
+            maxWidth: '854px',
             margin: 'auto',
-            gridTemplateColumns: ['1fr', '379px 1fr'],
-            gridTemplateAreas: [
-              'none',
-              `"left topRight"
-            "left bottomRight"`,
-            ],
+            gridTemplateColumns: ['1fr', '1fr 1fr'],
           }}
         >
-          <InfoCard
+          {/* <InfoCard
             title={t('landing.info-cards.multiply.multiply')}
             subtitle={t('landing.info-cards.multiply.subtitle')}
             links={[
@@ -399,17 +397,14 @@ export function HomepageView() {
                 text: t('landing.info-cards.multiply.open-vault'),
               },
             ]}
-            backgroundGradient="linear-gradient(141.11deg, #EBFAFF 0.79%, #EBF2FF 98.94%), linear-gradient(127.5deg, #EEE1F9 0%, #FFECE8 56.77%, #DDFFF7 100%)"
-            backgroundImage="/static/img/info_cards/pills.png"
+            backgroundGradient="linear-gradient(-63deg, rgba(179,95,255,0.2) 0%, rgba(179,202,101,0.2) 100%)"
+            backgroundImage=""
             sx={{
               gridArea: [null, 'left'],
               backgroundSize: ['70%, cover', '300px, cover'],
             }}
-          />
+          /> */}
           <InfoCard
-            sx={{
-              gridArea: [null, 'topRight'],
-            }}
             title={t('landing.info-cards.borrow.borrow-dai')}
             subtitle={t('landing.info-cards.borrow.choose-your-preferred-token')}
             links={[
@@ -418,13 +413,10 @@ export function HomepageView() {
                 text: t('landing.info-cards.borrow.open-vault'),
               },
             ]}
-            backgroundGradient="linear-gradient(98.21deg, #FFFBE8 2.63%, #FFF0E8 99.63%), linear-gradient(127.5deg, #E4F9C9 0%, #E8FFF5 49.48%, #F9E1EB 100%)"
-            backgroundImage="/static/img/info_cards/dai.png"
+            backgroundGradient="linear-gradient(-63deg, rgba(233,74,116,0.2) 0%, rgba(179,95,255,0.2) 100%)"
+            backgroundImage=""
           />
           <InfoCard
-            sx={{
-              gridArea: [null, 'bottomRight'],
-            }}
             title={t('landing.info-cards.manage.manage-your-vault')}
             subtitle={t('landing.info-cards.manage.make-actions')}
             links={[
@@ -433,8 +425,9 @@ export function HomepageView() {
                 text: t('landing.info-cards.manage.connect-your-wallet'),
               },
             ]}
-            backgroundGradient="linear-gradient(127.5deg, #E8EAFF 0%, #EEF0FF 0%, #FFF3FA 100%), linear-gradient(127.5deg, #DDFFF7 0%, #E8EAFF 61.98%, #F9E1EF 100%)"
-            backgroundImage="/static/img/info_cards/safe.png"
+            backgroundGradient="linear-gradient(-63deg, rgba(179,202,101,0.2) 0%, rgba(233,74,116,0.2) 100%)"
+            backgroundImage=""
+            //@GSUpro update info cards and remove mutiply end
           />
         </Grid>
       </Box>
@@ -474,10 +467,15 @@ export function Hero({ sx, isConnected }: { sx?: SxStyleProp; isConnected: boole
         sx={{
           display: 'flex',
           margin: '0 auto',
+          color: 'black',
           px: '40px',
           py: 2,
           alignItems: 'center',
+          '&:hover': {
+            bg: 'rgba(255,255,255,0.8)',
+          },
           '&:hover svg': {
+            bg: 'rgba(255,255,255,0.8)',
             transform: 'translateX(10px)',
           },
         }}

@@ -8,7 +8,7 @@ import React from 'react'
 import { Image, Text } from 'theme-ui'
 
 import {
-  getEstimatedGasFeeText,
+  getEstimatedGasFeeTextOld,
   VaultChangesInformationContainer,
   VaultChangesInformationItem,
 } from '../VaultChangesInformation'
@@ -39,7 +39,7 @@ export function SidebarVaultProxyStage({ stage, gasData }: SidebarOpenVaultProxy
           components={{
             1: (
               <AppLink
-                href="https://kb.oasis.app/help/what-is-a-proxy-contract"
+                href="/inprogress"
                 sx={{ fontSize: 2 }}
               />
             ),
@@ -58,7 +58,7 @@ export function SidebarVaultProxyStage({ stage, gasData }: SidebarOpenVaultProxy
           <VaultChangesInformationContainer title={t('creating-proxy-contract')}>
             <VaultChangesInformationItem
               label={t('transaction-fee')}
-              value={getEstimatedGasFeeText(gasData)}
+              value={getEstimatedGasFeeTextOld(gasData)}
             />
           </VaultChangesInformationContainer>
         </>
