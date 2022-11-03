@@ -1,5 +1,5 @@
 import { Icon } from '@makerdao/dai-ui-icons'
-import { LanguageSelect } from 'components/LanguageSelect'
+// import { LanguageSelect } from 'components/LanguageSelect'
 import { AppLink } from 'components/Links'
 import { NewsletterSection } from 'features/newsletter/NewsletterView'
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
@@ -169,7 +169,7 @@ function SocialWithLogo() {
         {/*@GSUpro add github end*/}
       </Flex>
       <Flex sx={{ justifyContent: ['center', 'flex-start'] }}>
-        <LanguageSelect components={LangSelectComponents} />
+        {/* <LanguageSelect components={LangSelectComponents} /> */}
       </Flex>
     </Grid>
   )
