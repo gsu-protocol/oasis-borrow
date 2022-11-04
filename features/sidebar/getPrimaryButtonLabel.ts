@@ -129,7 +129,7 @@ export function getPrimaryButtonLabel({
 }: PrimaryButtonLabelParams & { flow: SidebarFlow }): string {
   const { t } = useTranslation()
   const allowanceToken =
-    insufficientDaiAllowance || flow === 'openGuni' ? 'DAI' : token?.toUpperCase()
+    insufficientDaiAllowance || flow === 'openGuni' ? 'GSUc' : token?.toUpperCase()
 
   if (isSLPanelVisible) return t('protection.reopen-position')
 
@@ -211,7 +211,9 @@ export function getPrimaryButtonLabel({
     case 'multiplyTransitionEditing':
       return canTransition
         ? t('borrow-to-multiply.button-start')
-        : t('borrow-to-multiply.button-not-supported', { token: token?.toUpperCase() })
+        : t('borrow-to-multiply.button-not-supported', {
+            token: token?.toUpperCase() === 'DAI' ? 'GSUc' : token?.toUpperCase(),
+          })
     case 'multiplyTransitionWaitingForConfirmation':
       return t('borrow-to-multiply.button-confirm')
     case 'multiplyTransitionInProgress':
@@ -223,7 +225,9 @@ export function getPrimaryButtonLabel({
     case 'borrowTransitionEditing':
       return canTransition
         ? t('multiply-to-borrow.button-start')
-        : t('multiply-to-borrow.button-not-supported', { token: token?.toUpperCase() })
+        : t('multiply-to-borrow.button-not-supported', {
+            token: token?.toUpperCase() === 'DAI' ? 'GSUc' : token?.toUpperCase(),
+          })
     case 'borrowTransitionWaitingForConfirmation':
       return t('multiply-to-borrow.button-confirm')
     case 'borrowTransitionInProgress':

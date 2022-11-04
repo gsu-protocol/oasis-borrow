@@ -1,5 +1,5 @@
 import { Icon } from '@makerdao/dai-ui-icons'
-import { LanguageSelect } from 'components/LanguageSelect'
+// import { LanguageSelect } from 'components/LanguageSelect'
 import { AppLink } from 'components/Links'
 import { NewsletterSection } from 'features/newsletter/NewsletterView'
 import { staticFilesRuntimeUrl } from 'helpers/staticPaths'
@@ -7,10 +7,7 @@ import moment from 'moment'
 import { useTranslation } from 'next-i18next'
 import getConfig from 'next/config'
 import React from 'react'
-import { Box, Card, Container, Flex, Grid, Image, Link, Text } from 'theme-ui'
-
-import { ChevronUpDown } from './ChevronUpDown'
-import { SelectComponents } from 'react-select/src/components'
+import { Box, Container, Flex, Grid, Image, Link, Text } from 'theme-ui'
 
 const {
   publicRuntimeConfig: { buildHash, buildDate, showBuildInfo },
@@ -68,64 +65,6 @@ const FOOTER_SECTIONS = [
   //@GSUpro remove links ends
 ]
 
-const LangSelectComponents: Partial<SelectComponents<{
-  value: string
-  label: string
-}>> = {
-  IndicatorsContainer: () => null,
-  ValueContainer: ({ children }) => <Flex sx={{ color: 'primary100' }}>{children}</Flex>,
-  SingleValue: ({ children }) => <Box>{children}</Box>,
-  Option: ({ children, innerProps }) => (
-    <Box
-      {...innerProps}
-      sx={{
-        py: 2,
-        pl: 3,
-        pr: 5,
-        cursor: 'pointer',
-        '&:hover': {
-          bg: 'neutral10',
-        },
-      }}
-    >
-      {children}
-    </Box>
-  ),
-  Menu: ({ innerProps, children }) => (
-    <Card
-      {...innerProps}
-      sx={{
-        position: 'absolute',
-        borderRadius: 'large',
-        p: 0,
-        overflow: 'hidden',
-        top: 0,
-        transform: `translateY(calc(-100% + -8px))`,
-        boxShadow: 'cardLanding',
-      }}
-    >
-      {children}
-    </Card>
-  ),
-  MenuList: ({ children }) => <Box sx={{ textAlign: 'left' }}>{children}</Box>,
-  Control: ({ innerProps, children, selectProps: { menuIsOpen } }) => (
-    <Box
-      {...innerProps}
-      sx={{
-        cursor: 'pointer',
-        variant: 'links.nav',
-        display: 'inline-flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        fontSize: 3,
-      }}
-    >
-      {children}
-      <ChevronUpDown isUp={!!menuIsOpen} variant="select" size="auto" width="10px" height="7px" />
-    </Box>
-  ),
-}
-
 export function TemporaryFooter() {
   const commit = buildHash.substring(0, 10)
   const date = moment(buildDate).format('DD.MM.YYYY HH:MM')
@@ -169,7 +108,7 @@ function SocialWithLogo() {
         {/*@GSUpro add github end*/}
       </Flex>
       <Flex sx={{ justifyContent: ['center', 'flex-start'] }}>
-        <LanguageSelect components={LangSelectComponents} />
+        {/* <LanguageSelect components={LangSelectComponents} /> */}
       </Flex>
     </Grid>
   )

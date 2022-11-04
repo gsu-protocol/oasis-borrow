@@ -105,35 +105,35 @@ interface InfoItem {
   info: JSX.Element | string
 }
 
-function AutomationButton({ position }: { position: BorrowPositionVM | MultiplyPositionVM }) {
-  const { t } = useTranslation()
+// function AutomationButton({ position }: { position: BorrowPositionVM | MultiplyPositionVM }) {
+//   const { t } = useTranslation()
 
-  const { automationLinkProps } = position
+//   const { automationLinkProps } = position
 
-  if (position.automationEnabled) {
-    return (
-      <AppLink {...automationLinkProps}>
-        <Button variant="actionActiveGreen" sx={{ px: '24px', py: '11px' }}>
-          {t('earn.automation-button-on')} {position.protectionAmount}
-        </Button>
-      </AppLink>
-    )
-  } else if (position.isOwnerView) {
-    return (
-      <AppLink {...automationLinkProps}>
-        <Button variant="action" sx={{ px: '24px', py: '11px' }}>
-          {t('earn.automation-button-off')}
-        </Button>
-      </AppLink>
-    )
-  } else {
-    return (
-      <Button disabled={true} variant="action" sx={{ px: '24px', py: '11px' }}>
-        {t('earn.automation-button-off-disabled')}
-      </Button>
-    )
-  }
-}
+//   if (position.automationEnabled) {
+//     return (
+//       <AppLink {...automationLinkProps}>
+//         <Button variant="actionActiveGreen" sx={{ px: '24px', py: '11px' }}>
+//           {t('earn.automation-button-on')} {position.protectionAmount}
+//         </Button>
+//       </AppLink>
+//     )
+//   } else if (position.isOwnerView) {
+//     return (
+//       <AppLink {...automationLinkProps}>
+//         <Button variant="action" sx={{ px: '24px', py: '11px' }}>
+//           {t('earn.automation-button-off')}
+//         </Button>
+//       </AppLink>
+//     )
+//   } else {
+//     return (
+//       <Button disabled={true} variant="action" sx={{ px: '24px', py: '11px' }}>
+//         {t('earn.automation-button-off-disabled')}
+//       </Button>
+//     )
+//   }
+// }
 
 function getPositionInfoItems(position: PositionVM): InfoItem[] {
   const assetInfo = {
@@ -182,10 +182,10 @@ function getPositionInfoItems(position: PositionVM): InfoItem[] {
           header: <Header name="variable-perc" />,
           info: position.variable,
         },
-        {
-          header: <Header name="protection" />,
-          info: <AutomationButton position={position} />,
-        },
+        // {
+        //   header: <Header name="protection" />,
+        //   info: <AutomationButton position={position} />,
+        // },
       ]
     case 'multiply':
       return [
@@ -207,10 +207,10 @@ function getPositionInfoItems(position: PositionVM): InfoItem[] {
           header: <Header name="funding-cost" />,
           info: position.fundingCost,
         },
-        {
-          header: <Header name="protection" />,
-          info: <AutomationButton position={position} />,
-        },
+        // {
+        //   header: <Header name="protection" />,
+        //   info: <AutomationButton position={position} />,
+        // },
       ]
     case 'earn':
       return [

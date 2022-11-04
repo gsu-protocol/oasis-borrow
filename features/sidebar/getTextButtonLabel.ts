@@ -16,7 +16,7 @@ export function getTextButtonLabel({
   token,
 }: GetTextButtonLabelParams): string {
   const { t } = useTranslation()
-  const allowanceToken = flow === 'openGuni' ? 'DAI' : token?.toUpperCase()
+  const allowanceToken = flow === 'openGuni' ? 'GSUc' : token?.toUpperCase()
 
   switch (stage) {
     case 'editing':
@@ -27,7 +27,7 @@ export function getTextButtonLabel({
     case 'collateralAllowanceFailure':
       return t('edit-token-allowance', { token: allowanceToken })
     case 'daiAllowanceFailure':
-      return t('edit-token-allowance', { token: 'DAI' })
+      return t('edit-token-allowance', { token: 'GSUc' })
     default:
       if (otherAction === 'closeVault') return t('not-right-now')
       else return t('edit-vault-details')

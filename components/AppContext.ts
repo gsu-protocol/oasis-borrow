@@ -256,8 +256,6 @@ import {
   createProductCardsData$,
   createProductCardsWithBalance$,
   supportedBorrowIlks,
-  supportedEarnIlks,
-  supportedMultiplyIlks,
 } from '../helpers/productCards'
 import curry from 'ramda/src/curry'
 export type TxData =
@@ -938,8 +936,8 @@ export function setupAppContext() {
       ilkToToken$,
       {
         borrow: supportedBorrowIlks,
-        multiply: supportedMultiplyIlks,
-        earn: supportedEarnIlks,
+        // multiply: supportedMultiplyIlks,
+        // earn: supportedEarnIlks,
       },
       uiChanges,
     ),

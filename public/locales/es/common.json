@@ -1,5 +1,5 @@
 {
-  "get-started-button": "Comience a usar Oasis",
+  "get-started-button": "Comience a usar gsucoin",
   "404-button": "Ir a la página principal",
   "404-message": "Lo siento, no se pudo encontrar la página.",
   "about": {
@@ -135,13 +135,13 @@
   "erc20-disapprove-notification": "Rechazando {{ token }}",
   "erc20-disapprove-notification-past": "Rechazado {{ token }}",
   "error-header": "Se perdió la conexión",
-  "error-message": "Parece que hemos perdido la conexión. Haga click en el botón \"Recargar página\" para intentar nuevamente. Si este error continúa, por favor contáctenos en support@oasis.app",
+  "error-message": "Parece que hemos perdido la conexión. Haga click en el botón \"Recargar página\" para intentar nuevamente. Si este error continúa, por favor contáctenos en support@gsucoin.app",
   "error-button-reload": "Recargar página",
   "error-button": "Más información",
   "exchange": {
     "onboarding": {
       "title": "Dígale Hola a gsucoin Swap",
-      "body": "Intercambie sus tokens de forma rápida y segura en Oasis. Visite <0>las preguntas frecuentes de gsucoin Swap para más información →</0>",
+      "body": "Intercambie sus tokens de forma rápida y segura en gsucoin. Visite <0>las preguntas frecuentes de gsucoin Swap para más información →</0>",
       "faq-url": "/inprogress",
       "button": "Entendido"
     }
@@ -278,7 +278,7 @@
       },
       "faq": {
         "title": "¿Tiene alguna pregunta?",
-        "description": "Conozca más sobre Oasis, GSUC y DeFi en nuestras preguntas frecuentes"
+        "description": "Conozca más sobre gsucoin, GSUC y DeFi en nuestras preguntas frecuentes"
       }
     },
     "tabs": {
@@ -688,7 +688,7 @@
   "tos-accept-message": "Antes de comenzar, deberá leer y aceptar nuestras condiciones de servicio.",
   "tos-accept-message-updated": "Antes de poder continuar, deberá leer y aceptar nuestras condiciones de servicio actualizadas.",
   "tos-acceptance-check-in-progress": "Comprobación de aceptación en progreso...",
-  "tos-desc": "Al crear un bote de ahorros, acepto Oasis",
+  "tos-desc": "Al crear un bote de ahorros, acepto gsucoin",
   "tos-jwt-signature-message": "Por favor firme un mensaje con su dirección de Ethereum para confirmar su aceptación de los términos de servicio.",
   "tos-read": "He leído y acepto las Condiciones de servicio.",
   "tos-view": "Ver condiciones de servicio",
@@ -764,7 +764,7 @@
     "price-impact": "(Impacto en el) Precio del {{token}}",
     "slippage-limit": "Límite de deslizamiento",
     "third-party-fees": "Tasas de protocolos de terceros",
-    "oasis-fee": "Tasa de Oasis"
+    "oasis-fee": "Tasa de gsucoin"
   },
   "vault-actions": {
     "deposit": "Deposita",
@@ -899,7 +899,7 @@
   "welcome": "Bienvenido al nuevo GSUcoin.app.",
   "wallet": "Cartera",
   "read-blog-post": "Lea el post en nuestro blog",
-  "visit-old-oasis": "Visitar la versión anterior de Oasis",
+  "visit-old-oasis": "Visitar la versión anterior de gsucoin",
   "oracles": {
     "header": "Oráculos",
     "description": "En esta página puede ver el precio actual y siguiente de los distintos colaterales admitidos en los Vaults GSUP. La mayoría utilizan el Módulo de Seguridad del Oráculo (OSM), que actualiza el precio una vez por hora. Por lo tanto, si hay caídas abruptas de precio, los usuarios disponen de una hora para reaccionar al cambio de precio.",
@@ -1105,7 +1105,7 @@
   "wyre-purchase-notification-past": "Comprado con Wyre",
   "newsletter": {
     "title": "Manténgase al día con GSUcoin.app",
-    "subtitle": "Suscríbase a nuestro boletín de actualizaciones de Oasis",
+    "subtitle": "Suscríbase a nuestro boletín de actualizaciones de gsucoin",
     "placeholder": "Dirección de email",
     "button": "Suscríbase",
     "success": "Gracias por suscribirse al boletín!",
@@ -1138,7 +1138,7 @@
   },
   "modal-trezor-eip1559-title": "Trezor en Metamask no soporta el EIP-1559",
   "modal-trezor-eip1559-paragraph1": "GSUcoin.app actualizó las transacciones recientemente para soportar el EIP-1559. Trezor en Metamask no soporta actualmente las transacciones EIP-1559, ver <0>aquí</0>",
-  "modal-trezor-eip1559-paragraph2": "Puede seguir utilizando Metamask y Trezor en nuestro entorno anterior en <0>legacy.oasis.app</0>",
+  "modal-trezor-eip1559-paragraph2": "Puede seguir utilizando Metamask y Trezor en nuestro entorno anterior en <0>legacy.gsucoin.app</0>",
   "modal-trezor-eip1559-paragraph3": "Como alternativa, si tiene un Trezor Model T, puede <0>conectarse</0> directamente a GSUcoin.app",
   "product-card": {
     "borrow": "Un Vault diseñado para pedir préstamos contra {{token}}",

@@ -7,10 +7,6 @@ import { ContextConnected } from '../../../blockchain/network'
 import { UIChanges } from '../../../components/AppContext'
 import { getProductCategoryUrl, ProductCategory } from '../../../config/product-categories'
 import { mapTokenToFilter, supportedEarnIlks } from '../../../helpers/productCards'
-import {
-  SWAP_WIDGET_CHANGE_SUBJECT,
-  SwapWidgetChangeAction,
-} from '../../automation/protection/common/UITypes/SwapWidgetChange'
 import { Web3Context } from '@oasisdex/web3-context/src/types'
 
 export type AssetAction = UrlAssetAction | OnClickAssetAction
@@ -56,20 +52,20 @@ function productCategoryToAssetAction(
         text: 'Borrow',
         icon: 'collateral',
       }
-    case 'multiply':
-      return {
-        path: getProductCategoryUrl('multiply'),
-        hash: urlFragment,
-        text: 'Multiply',
-        icon: 'copy',
-      }
-    case 'earn':
-      return {
-        path: getProductCategoryUrl('earn'),
-        hash: urlFragment,
-        text: 'Earn',
-        icon: 'increase',
-      }
+    // case 'multiply':
+    //   return {
+    //     path: getProductCategoryUrl('multiply'),
+    //     hash: urlFragment,
+    //     text: 'Multiply',
+    //     icon: 'copy',
+    //   }
+    // case 'earn':
+    //   return {
+    //     path: getProductCategoryUrl('earn'),
+    //     hash: urlFragment,
+    //     text: 'Earn',
+    //     icon: 'increase',
+    //   }
     default:
       throw new Error(`no asset action for productCategory ${productCategory}`)
   }
@@ -148,23 +144,24 @@ export function createAssetActions$(
     }),
     // add swap
     flatMap((assetActions) => combineLatest(of(assetActions), contextConnected$)),
-    map(([assetActions, contextIsConnected]) => {
-      const swapAction = contextIsConnected
-        ? [
-            //@GSUpro remove swap
-            // {
-            //   onClick: () => {
-            //     uiChanges.publish<SwapWidgetChangeAction>(SWAP_WIDGET_CHANGE_SUBJECT, {
-            //       type: 'open',
-            //       token,
-            //     })
-            //   },
-            //   text: 'Swap',
-            //   icon: 'exchange',
-            // },
-            //@GSUpro remove swap end
-          ]
-        : []
+    map(([assetActions]) => {
+      const swapAction: any = []
+      //  contextIsConnected
+      //   ? [
+      //       //@GSUpro remove swap
+      //       // {
+      //       //   onClick: () => {
+      //       //     uiChanges.publish<SwapWidgetChangeAction>(SWAP_WIDGET_CHANGE_SUBJECT, {
+      //       //       type: 'open',
+      //       //       token,
+      //       //     })
+      //       //   },
+      //       //   text: 'Swap',
+      //       //   icon: 'exchange',
+      //       // },
+      //       //@GSUpro remove swap end
+      //     ]
+      //   : []
       return [...swapAction, ...assetActions]
     }),
   )
