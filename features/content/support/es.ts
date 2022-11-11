@@ -193,8 +193,7 @@ export const content: ContentTypeSupport = {
         {
           question: 'Is GSUcoin Secure?',
           answer:
-            'Security is our top priority. We stringently follow the best security practices, and the system consists of regularly audited smart contracts and code. In addition, GSUcoin code is open-source, giving everyone in the community the ability to pressure test and audit the core technology. You can check our documentation page where you will find links to our codebase, smart contracts addresses and code and the audit reports.
-',
+            'Security is our top priority. We stringently follow the best security practices, and the system consists of regularly audited smart contracts and code. In addition, GSUcoin code is open-source, giving everyone in the community the ability to pressure test and audit the core technology. You can check our documentation page where you will find links to our codebase, smart contracts addresses and code and the audit reports.',
         },
         {
           question: 'Can GSUcoin access the funds in my account or wallet?',
