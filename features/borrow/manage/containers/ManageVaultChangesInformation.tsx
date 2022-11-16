@@ -73,7 +73,7 @@ export function ManageVaultChangesInformation(
       <VaultChangesInformationItem
         label={`${t('system.liquidation-price')}`}
         value={
-          <Flex>
+          <Flex sx={{ fontFamily: '"GSU Font", "Open Sans"' }}>
             {`$${formatCryptoBalance(liquidationPrice || zero)}`}
             <VaultChangesInformationArrow />
             {`$${formatCryptoBalance(afterLiquidationPrice || zero)}`}

@@ -36,8 +36,9 @@ function AssetRow(props: PositionView) {
         pr: '14px',
         borderRadius: '12px',
       }}
-      title={`${props.title}  |  ${props.proportion && formatPercent(props.proportion)}  |  $${props.contentsUsd && formatAmount(props.contentsUsd, 'USD')
-        }`}
+      title={`${props.title}  |  ${props.proportion && formatPercent(props.proportion)}  |  $${
+        props.contentsUsd && formatAmount(props.contentsUsd, 'USD')
+      }`}
     >
       <Icon
         name={getToken(props.token).iconCircle}
@@ -52,6 +53,7 @@ function AssetRow(props: PositionView) {
           whiteSpace: 'nowrap',
           textOverflow: 'ellipsis',
           overflow: 'hidden',
+          fontFamily: 'GSU Font, Open Sans',
         }}
       >
         {props.title}
@@ -74,6 +76,7 @@ function AssetRow(props: PositionView) {
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
             overflow: 'hidden',
+            fontFamily: '"GSU Font", "Open Sans"',
           }}
         >
           (${formatAmount(props.contentsUsd, 'USD')})
@@ -209,7 +212,9 @@ function TotalAssetsContent(props: { totalValueUsd: BigNumber }) {
           ]}
         />
       </Text>
-      <Text sx={{ fontWeight: 'medium', fontSize: 7, mt: '4px' }}>
+      <Text
+        sx={{ fontFamily: 'GSU Font, Open Sans', fontWeight: 'medium', fontSize: 7, mt: '4px' }}
+      >
         ${formatAmount(props.totalValueUsd, 'USD')}
       </Text>
     </Box>
