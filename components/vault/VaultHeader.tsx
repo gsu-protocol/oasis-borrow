@@ -87,7 +87,7 @@ export function VaultHeader(props: {
   return (
     <VaultHeaderContainer header={header} token={token} priceInfo={priceInfo}>
       <VaultIlkDetailsItem
-        label="VaultID"
+        label="Vault ID"
         value={id ? id.toFixed(0) : 'T.B.D'}
         tooltipContent={t('manage-multiply-vault.tooltip.vaultId')}
       />
