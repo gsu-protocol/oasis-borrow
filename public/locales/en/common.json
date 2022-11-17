@@ -1283,7 +1283,7 @@
       "link": "https://ethereum.org/en/eth/"
     },
     "btc": {
-      "description": "Bitcoin itself cannot be used directly, but needs to be moved onto the Ethereum Blockchain to use it in GSUcoin.app. Wrapped Bitcoin (wBTC) delivers the power of Bitcoin with the flexibility of an ERC20 token. Get the most of your Bitcoin Borrowing.",
+      "description": "Bitcoin itself cannot be used directly, but needs to be moved onto the Ethereum Blockchain to be used in GSUcoin.app. Wrapped Bitcoin (wBTC) delivers the power of Bitcoin with the flexibility of an ERC20 token. Get the most of your Bitcoin Borrowing.",
       "link": "https://wbtc.network/"
     },
     "usdc": {

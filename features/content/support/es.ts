@@ -72,7 +72,7 @@ export const content: ContentTypeSupport = {
 
         {
           question: "What is ‘GSUc available’ in the Borrow app? Why can't I borrow more GSUc?",
-          answer: `The GSU protocol sets an upper limit for borrowing against each Vault type: the Debt Ceiling. GSUc available represents the maximum amount of GSUc all Vault owners can generate against that Vault type until the Debt Ceiling is reached. This Debt Ceiling should not be confused with the GSUc available to generate seen in your Vault page. That amount represents the maximum amount of GSUc you can borrow based on your current Vault state. In case the Debt Ceiling is reached no more GSUc can be generated unless the debt ceiling is lifted or someone payback their debt. The GSU protocol updates the debt ceiling regularly but if you can’t generate more GSUc because the Debt Ceiling has been reached please check back in a few hours.`,
+          answer: `The GSU protocol sets an upper limit for borrowing against each Vault type: the Debt Ceiling. ‘GSUc available’ represents the maximum amount of GSUc all Vault owners can generate against that Vault type until the Debt Ceiling is reached. This Debt Ceiling should not be confused with the ‘GSUc available’ to generate seen in your Vault page. That amount represents the maximum amount of GSUc you can borrow based on your current Vault state. In case the Debt Ceiling is reached no more GSUc can be generated unless the debt ceiling is lifted.`,
         },
 
         {
@@ -95,11 +95,11 @@ export const content: ContentTypeSupport = {
           answer: `Transaction speed allows you to pay more gas to get your transactions mined faster. In case you are in a hurry, for example to increase your Collateralization Ratio to avoid liquidation, you can set a fast speed for your transactions.`,
         },
 
-        {
-          question: 'How can I contact the GSUcoin team?',
-          answer:
-            'If you have any questions, reach out to us through our Contact page or on [Twitter](https://twitter.com/GSUcoin).',
-        },
+        // {
+        //   question: 'How can I contact the GSUcoin team?',
+        //   answer:
+        //     'If you have any questions, reach out to us through Support@GSUcoin.app or on [Twitter](https://twitter.com/GSUcoin).',
+        // },
       ],
     },
     // {

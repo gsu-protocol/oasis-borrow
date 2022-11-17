@@ -14,6 +14,14 @@ export const content: ContentTypeSupport = {
       id: 'using-gsucoin',
       questions: [
         {
+          question: 'What is GSUc?',
+          answer: `GSUc is a stablecoin pegged to the exchange rate of GSU, which is the worlds most stable unit. It reflects actual underlying economic activities between countries and currencies. It does not exist in the traditional monetary systems, therefore we call it blockchain native stablecoin. It optimally reduces volatility and the risk of disorderly exchange-rate movements. To learn more about GSUc, read our introduction to the GSU exchange rate.`,
+        },
+        {
+          question: 'What is GSUc?',
+          answer: `GSUc is a stablecoin pegged to the exchange rate of GSU, which is the worlds most stable unit. It reflects actual underlying economic activities between countries and currencies. It does not exist in the traditional monetary systems, therefore we call it blockchain native stablecoin. It optimally reduces volatility and the risk of disorderly exchange-rate movements. To learn more about GSUc, read our introduction to the GSU exchange rate.`,
+        },
+        {
           question: 'What assets can I use as collateral?',
           answer: `You can use many different collateral types which are voted in by GSU Governance to the GSU Protocol, including ETH and wrapped BTC. You can see each one by visiting GSUcoin.app with the corresponding Stability Fees and Minimum Collateralization Ratios.`,
         },
@@ -72,7 +80,7 @@ export const content: ContentTypeSupport = {
 
         {
           question: "What is ‘GSUc available’ in the Borrow app? Why can't I borrow more GSUc?",
-          answer: `The GSU protocol sets an upper limit for borrowing against each Vault type: the Debt Ceiling. GSUc available represents the maximum amount of GSUc all Vault owners can generate against that Vault type until the Debt Ceiling is reached. This Debt Ceiling should not be confused with the GSUc available to generate seen in your Vault page. That amount represents the maximum amount of GSUc you can borrow based on your current Vault state. In case the Debt Ceiling is reached no more GSUc can be generated unless the debt ceiling is lifted or someone payback their debt. The GSU protocol updates the debt ceiling regularly but if you can’t generate more GSUc because the Debt Ceiling has been reached please check back in a few hours.`,
+          answer: `The GSU protocol sets an upper limit for borrowing against each Vault type: the Debt Ceiling. ‘GSUc available’ represents the maximum amount of GSUc all Vault owners can generate against that Vault type until the Debt Ceiling is reached. This Debt Ceiling should not be confused with the ‘GSUc available’ to generate seen in your Vault page. That amount represents the maximum amount of GSUc you can borrow based on your current Vault state. In case the Debt Ceiling is reached no more GSUc can be generated unless the debt ceiling is lifted.`,
         },
 
         {
@@ -95,11 +103,11 @@ export const content: ContentTypeSupport = {
           answer: `Transaction speed allows you to pay more gas to get your transactions mined faster. In case you are in a hurry, for example to increase your Collateralization Ratio to avoid liquidation, you can set a fast speed for your transactions.`,
         },
 
-        {
-          question: 'How can I contact the GSUcoin team?',
-          answer:
-            'If you have any questions, reach out to us through our Contact page or on [Twitter](https://twitter.com/GSUcoin).',
-        },
+        // {
+        //   question: 'How can I contact the GSUcoin team?',
+        //   answer:
+        //     'If you have any questions, reach out to us through Support@GSUcoin.app or on [Twitter](https://twitter.com/GSUcoin).',
+        // },
       ],
     },
     // {
@@ -159,11 +167,6 @@ export const content: ContentTypeSupport = {
     //     {
     //       question: 'What is GSUcoin Wallet?',
     //       answer: `GSUcoin Wallet is the home for everything you want to accomplish with GSUc. A decentralized application that runs on the Ethereum blockchain, GSUcoin Wallet enables you to Buy, Send, and Manage your GSUc all in one place.
-    //       `,
-    //     },
-    //     {
-    //       question: 'What is GSUc?',
-    //       answer: `GSUc is a stablecoin pegged to the exchange rate of GSU, which is the worlds most stable unit. It reflects actual underlying economic activities between countries and currencies. It does not exist in the traditional monetary systems, therefore we call it blockchain native stablecoin. It optimally reduces volatility and the risk of disorderly exchange-rate movements. To learn more about GSUc, read our introduction to the GSU exchange rate.
     //       `,
     //     },
     //     {
