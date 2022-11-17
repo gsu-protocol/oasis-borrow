@@ -203,13 +203,13 @@ function TotalAssetsContent(props: { totalValueUsd: BigNumber }) {
       <Text variant="paragraph2" sx={{ color: 'neutral80', mt: '7px' }}>
         <Trans
           i18nKey="vaults-overview.total-assets-subheader"
-          components={[
-            <AppLink
-              href="/inprogress"
-              // target="_blank"
-              sx={{ fontWeight: 'body', fontSize: 3 }}
-            />,
-          ]}
+          // components={[
+          //   <AppLink
+          //     href="/inprogress"
+          //     // target="_blank"
+          //     sx={{ fontWeight: 'body', fontSize: 3 }}
+          //   />,
+          // ]}
         />
       </Text>
       <Text
