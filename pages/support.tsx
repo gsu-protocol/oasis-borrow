@@ -12,14 +12,9 @@ import {
 } from 'features/content/support/support'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import getConfig from 'next/config'
 import React, { useState } from 'react'
 import { TRANSITIONS } from 'theme'
 import { Box, Flex, Heading } from 'theme-ui'
-
-const {
-  publicRuntimeConfig: { apiHost },
-} = getConfig()
 
 function Question({ question, answer }: ContentQuestion) {
   const [opened, setOpened] = useState(false)
