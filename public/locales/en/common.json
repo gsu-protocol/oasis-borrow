@@ -282,7 +282,7 @@
       "headlinePreAssetLandingPages": "Borrow GSUc",
       "subheaderPreAssetLandingPages": "Open a GSUp Vault, deposit 25+ crypto collaterals. Either borrow GSUc or buy additional collateral to increase your exposure.<0/> Connect a wallet to start.",
       "headline": "Deploy your crypto into GSUcoin.app",
-      "subheader": "Borrow against your crypto. ETH, BTC and 30 more cryptos available to put to work."
+      "subheader": "Borrow against your crypto. Put your crypto to work, currently ETH and BTC."
     },
     "stats": {
       "30-day-volume": "30 Day Volume",
@@ -399,7 +399,7 @@
       "collateralization-ratio-description": "The price used to calculate the value of your collateral is the price obtained from the GSU protocol oracles. Your collateralization ratio needs to be above the minimum required at all times to not get liquidated.",
       "collateralization-ratio-next-price": "Collateralization ratio on the next price will be:",
       "collateral-locked-amount": "The total amount of collateral locked in your vault is:",
-      "collateral-locked-USD": "The total value in dollars of the collateral in your vault is:",
+      "collateral-locked-USD": "The total value in GSUc of the collateral in your vault is:",
       "collateral-locked-oracles": "We use the current price from the GSU protocol oracles to calculate this value. The current market price of your collateral may differ from this price."
     }
   },

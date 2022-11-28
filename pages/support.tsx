@@ -163,7 +163,7 @@ function SupportPage() {
         {cantFind}
         <AppLink
           //@GSUpro updates link
-          href={`${apiHost}/inprogress`}
+          href={`mailto:support@gsucoin.app`}
           //@GSUpro updates link end
           sx={{ color: 'primary100', textDecoration: 'underline', ml: 1 }}
         >

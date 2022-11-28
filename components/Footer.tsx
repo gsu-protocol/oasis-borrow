@@ -32,7 +32,7 @@ const FOOTER_SECTIONS = [
       { labelKey: 'nav.cookie', url: '/cookie' },
       { labelKey: 'nav.terms', url: '/terms' },
       // { labelKey: 'nav.contact', url: `${apiHost}/daiwallet/contact` },
-      { labelKey: 'nav.contact', url: `/inprogress` },
+      { labelKey: 'nav.contact', url: `mailto:support@GSUcoin.app` },
     ],
   },
   {
