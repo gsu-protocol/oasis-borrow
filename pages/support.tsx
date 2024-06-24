@@ -79,7 +79,7 @@ function Navigation({ navigation }: { navigation: ContentNavigation[] }) {
       sx={{
         alignItems: 'center',
         //@GSUpro fixes styles
-        justifyContent: ['center', 'center', 'center', 'space-between'],
+        justifyContent: ['center', 'center', 'center', 'start'],
         flexDirection: ['column', 'column', 'column', 'row'],
         //@GSUpro fixes styles end
       }}
@@ -108,7 +108,7 @@ function Navigation({ navigation }: { navigation: ContentNavigation[] }) {
               position: 'absolute',
               width: '4px',
               height: '4px',
-              bg: 'secondary100',
+              bg: 'transparent',
               right: -3,
               top: '50%',
               borderRadius: '50%',
